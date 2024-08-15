@@ -1,0 +1,68 @@
+.dashboard-banner {
+  background: #618062; /* You can use the color palette you prefer */
+  border-radius: 10px;
+  padding: 20px;
+  color: #fff;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 681px;
+height: 200px;
+}
+
+.banner-content {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+}
+
+.left-section h1 {
+  margin: 0;
+  font-size: 1.5em;
+  font-weight: 600;
+}
+
+.left-section p {
+  margin: 5px 0 0;
+  font-size: 1.1em;
+}
+
+.left-section p strong {
+  font-weight: 700;
+}
+
+.left-section p span {
+  font-weight: 400;
+  margin-left: 10px;
+}
+
+.right-section {
+  display: flex;
+  align-items: center;
+}
+
+.time {
+  font-size: 1.2em;
+  margin-right: 20px;
+  font-weight: 600;
+}
+
+.create-project-btn {
+  background: #f8b400;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 20px;
+  color: #fff;
+  font-weight: 600;
+  cursor: pointer;
+  margin-right: 20px;
+}
+
+.create-project-btn:hover {
+  background: #e89d00;
+}
+
+.validated-projects {
+  font-size: 1em;
+  font-weight: 600;
+}
