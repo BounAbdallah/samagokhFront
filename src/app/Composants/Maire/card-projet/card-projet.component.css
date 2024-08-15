@@ -1,0 +1,35 @@
+.project-card {
+  max-width: 350px;
+  margin: auto;
+  background-color: #fff;
+  border-radius: 10px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+}
+.project-card img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+  width: 323.751px;
+height: 162.933px;
+flex-shrink: 0;
+border-radius: 20px;
+
+}
+.badge-secondary-custom {
+  background-color: #E9ECEF;
+  color: #212529;
+}
+.text-muted-custom {
+  color: #6C757D;
+}
+.btn-primary-custom {
+  background-color: #D6111A;
+  color: #fff;
+}
+.btn-primary-custom:hover {
+  background-color: #BA0E17;
+}
+.card-body{
+  margin: 20px;
+}

@@ -1,0 +1,28 @@
+
+
+
+
+.project-card {
+  width: 350px;
+  height: 250px;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  background-color: #fff;
+}
+.status-circle {
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #fff;
+  font-weight: bold;
+}
+
+
+/* .project-card{ */
+  /* background-image: url('./assets/images/bgStatistique.png'); */
+
+/* } */
