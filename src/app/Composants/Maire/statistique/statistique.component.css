@@ -6,9 +6,16 @@
   width: 350px;
   height: 250px;
   padding: 20px;
+  background-color: #618062;
+  background-image: url(../../../../assets/images/bgStatistique.png);
+  background-size: cover;
+  background-position: center;
+
   border-radius: 10px;
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-  background-color: #fff;
+  padding: 20px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+
+
 }
 .status-circle {
   width: 32px;
@@ -20,9 +27,3 @@
   color: #fff;
   font-weight: bold;
 }
-
-
-/* .project-card{ */
-  /* background-image: url('./assets/images/bgStatistique.png'); */
-
-/* } */
