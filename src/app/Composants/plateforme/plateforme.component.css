@@ -1,0 +1,147 @@
+body {
+  background-color: #f8f9fa;
+  margin:0;
+}
+
+.hero-section {
+  position: relative;
+  background-image: url(../../../assets/images/Bckgimg.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  text-align: center;
+  color: white;
+  margin-bottom: 5rem;
+}
+
+.hero-section::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: black;
+  opacity: 0.5; 
+  z-index: 1;
+  background-blend-mode: overlay;
+}
+
+.hero-section h1, .hero-section .btn {
+  position: relative;
+  z-index: 2;
+}
+
+.navbar .navbar-nav .nav-link {
+  color: white;
+}
+.navbar{
+  background-color: #0C3B2E;
+height: 8rem;
+}
+
+.submit-btn {
+  background-color: #ffc107;
+  color: #333;
+  border-radius: 0.25rem;
+  padding: 0.75rem 1.5rem;
+  font-size: 1.25rem;
+}
+.cta-button {
+  background-color: #ff8c00;
+  color: white;
+  padding: 15px 30px;
+  text-decoration: none;
+  border-radius: 5px;
+  font-size: 18px;
+  z-index: 3;
+}
+
+.cta-button:hover {
+  background-color: #ff7b00;
+}
+.logo{
+  width: auto;
+height: 9.0625rem;
+}
+.span1{
+color:#0C3B2E;
+font-size:3rem;
+}
+.span2{
+ color:#FA983A;
+ font-size:3rem;
+}
+.span3{
+color:#E31B23;
+font-size:3rem;
+}
+h2{
+  text-align:center;
+}
+.banderole{
+  height: 8rem;
+  width:60rem;
+  
+}
+.paragraphe1{
+  color: #000;
+font-size: 1.2rem;
+font-style: normal;
+font-weight: 400;
+line-height: normal;
+width: 36.9375rem;
+margin-bottom: 2rem;
+margin-left:3rem
+}
+.paragraphe2{
+  color: #000;
+font-size: 1.2rem;
+font-style: normal;
+font-weight: 400;
+line-height: normal;
+width: 36.9375rem;
+margin-bottom: 2rem;
+margin-left: 9rem;
+}
+.paragraphe1 span{
+  font-weight:500;
+}
+.paragraphe2 span{
+  font-weight:500;
+}
+.caisse{
+  display:flex;
+  justify-content: space-between;
+  margin-top: 5rem;
+  margin-bottom:7rem
+}
+.vert{
+  width: 49.625rem;
+  height: 7.5rem;
+  background-color: #0C3B2E;
+  border-radius: 3.75rem 0rem 0rem 0rem;
+  margin-top:2rem;
+}
+.jaune{
+  width: 49.625rem;
+  height: 7.5rem;
+  background-color:#FA983A;
+  border-radius: 0rem 3.75rem 0rem 0rem;
+  margin-bottom: 2rem;
+}
+.firstpic{
+  width: 35.75rem;
+height: 19.875rem;
+margin-left:3rem
+}
+.secondpic{
+  width: 35.75rem;
+height: 19.875rem;
+margin-left: 9rem;
+}
