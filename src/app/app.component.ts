@@ -6,11 +6,12 @@ import { StatistiqueComponent } from "./Composants/Maire/statistique/statistique
 import { CardProjetComponent } from "./Composants/Maire/card-projet/card-projet.component";
 import { NotificationComponent } from "./Composants/Maire/notification/notification.component";
 import { BarDeRecherheComponent } from "./Composants/Maire/bar-de-recherhe/bar-de-recherhe.component";
+import { DetailsProjetComponent } from "./Composants/Maire/details-projet/details-projet.component";
 
 @Component({
   selector: 'app-root',
   standalone: true,
-  imports: [RouterOutlet, SideBarComponent, BanniereComponent, StatistiqueComponent, CardProjetComponent, NotificationComponent, BarDeRecherheComponent],
+  imports: [RouterOutlet, SideBarComponent, BanniereComponent, StatistiqueComponent, CardProjetComponent, NotificationComponent, BarDeRecherheComponent, DetailsProjetComponent],
   templateUrl: './app.component.html',
   styleUrl: './app.component.css'
 })
