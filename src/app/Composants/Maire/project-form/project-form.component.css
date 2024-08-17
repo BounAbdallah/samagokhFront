@@ -1,0 +1,40 @@
+.row{
+  width: 750px;
+height: 530px;
+flex-shrink: 0;
+}
+
+label {
+  font-weight: bold;
+}
+
+input.form-control,
+textarea.form-control {
+  border-radius: 10px;
+  border: 1px solid #cccccc;
+  font-size: 16px;
+}
+
+button.btn-outline-warning {
+  color: #ffa500;
+  border-color: #ffa500;
+  font-weight: bold;
+  border-radius: 20px;
+}
+
+button.btn-outline-warning:hover {
+  background-color: #ffa500;
+  color: #fff;
+}
+
+button.btn-outline-success {
+  color: #28a745;
+  border-color: #28a745;
+  font-weight: bold;
+  border-radius: 20px;
+}
+
+button.btn-outline-success:hover {
+  background-color: #28a745;
+  color: #fff;
+}
