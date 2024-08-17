@@ -1,0 +1,176 @@
+.card-header{
+    background-color: #6D9773;
+}
+.input{
+    width: 31.25rem;
+    margin-left: 18.75rem;
+}
+.add-role{
+    width: 8.476rem;
+    height: 2.375rem;
+    flex-shrink: 0;
+    border-radius: 0.313rem;
+    background: #FFF;
+    color: #6D9773;
+    font-family: Inter;
+    font-size: 1.125rem;
+    font-style: normal;
+    font-weight: bold;
+    line-height: normal;
+    margin-left: 6.25rem;
+}
+
+/* sidebar et contenue  */
+
+.side-bar{
+    width: 16.25rem;
+    height: 59.375rem;
+    flex-shrink: 0;
+    border-radius: 0px 0.75rem 0.75rem 0px;
+    background: #6D9773;
+}
+.logo{
+    width: 11rem;
+    height: 9.375rem;
+    flex-shrink: 0;
+    border-radius: 0.75rem;
+    margin: auto;
+}
+ul li{
+    color: #FFF;
+    font-family: Montserrat;
+    font-size: 1.563rem;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 2.5rem;
+    display: flex;
+    width: 14.063rem;
+    padding: 0.625rem;
+    align-items: center;
+    gap: 0.625rem;
+}
+ul li:hover{
+    display: flex;
+    width: 14.063rem;
+    padding: 0.625rem;
+    align-items: center;
+    gap: 0.625rem;
+    border-radius: 0.25rem;
+    background: #FFF;
+    color: #000;
+    margin: auto;
+}
+
+#search-input {
+    width: 43.75rem;
+    height: 3.125rem;
+    margin-left: 6.25rem;
+    margin-top: 0.625rem;
+    padding: 0 0.938rem;
+    border: 0.063rem solid #ced4da;
+    border-radius: 1.25rem;
+    font-size: 1rem;
+    outline: none;
+    transition: border-color 0.3s, box-shadow 0.3s;
+}
+
+#search-input:focus {
+    border-color: #6D9773;
+    box-shadow: 0 0 0 0.188rem rgba(109, 151, 115, 0.25);
+}
+
+.profil i{
+    width: 3.313rem;
+    height: 3.313rem;
+    flex-shrink: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 0.625rem;
+    margin-left: 6.25rem;
+}
+.profil img{
+    width: 3.125rem;
+    height: 3.125rem;
+    border-radius: 50%;
+    flex-shrink: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 0.625rem;
+    margin-left: 6.25rem;
+    margin-top: 0.625rem;
+    padding: 0.313rem;
+    background-color: #FFF;
+}
+body{
+    background-color: #D8D8D8;
+}
+.statistique{
+    width: 23.188rem;
+    height: 8.313rem;
+    flex-shrink: 0;
+    border-radius: 0.938rem;
+    background: #FFF;
+    margin-left: 5.625rem;
+    justify-content: space-between;
+    box-shadow: 0rem 0.25rem 0.25rem 0rem rgba(0, 0, 0, 0.25);
+}
+.icone{
+    width: 3.125rem;
+    height: 3.125rem;
+    border-radius: 50%;
+    flex-shrink: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 0.625rem;
+    margin-top: -1.875rem;
+    padding: 0.313rem;
+    background-color: #3C95EE;
+}
+hr{
+    width: 20.625rem;
+    justify-content: center;
+    align-items: center;
+    margin-left: 1.25rem;
+}
+.hr_nom p{
+    color: #000;
+    font-family: Montserrat;
+    font-size: 1rem;
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;
+    text-align: center;
+}
+.ville{
+    width: 72.688rem;
+    height: 35.75rem;
+    flex-shrink: 0;
+    border-radius: 0.625rem;
+    background: #D9D9D9;
+}
+.icone_card{
+    width: 100%;
+    height: 17.938rem;
+    flex-shrink: 0;
+    border-radius: 50%;
+    flex-shrink: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 0.625rem;
+    margin-top: -1.875rem;
+    background-color: #3C95EE;
+}
+
+.statistique_card{
+    width: 23.188rem;
+    height: 25.688rem;
+    flex-shrink: 0;
+    border-radius: 0.625rem;
+    background: #FFF;
+    box-shadow: 0rem 0.25rem 0.25rem 0rem rgba(0, 0, 0, 0.25);
+}
+

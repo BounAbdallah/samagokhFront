@@ -1,6 +1,7 @@
 import { Component, OnInit} from '@angular/core';
 import { RoleService } from '../../../Services/adminServices/role/role.service';
 import { CommonModule } from '@angular/common';
+import { FormsModule } from '@angular/forms';
 
 interface PaginatedResponse<T> {
   current_page: number;
@@ -17,13 +18,15 @@ interface Role {
 @Component({
   selector: 'app-roles',
   standalone: true,
-  imports: [CommonModule],
+  imports: [CommonModule,FormsModule],
   templateUrl: './roles.component.html',
   styleUrl: './roles.component.css'
 })
-export class RolesComponent implements OnInit{roles: Role[] = [];
+export class RolesComponent implements OnInit{
+  roles: Role[] = [];
   currentPage: number = 1;
   totalPages: number = 1;
+  newRoleName: string = ''; // Nouvelle propriété pour stocker le nom du rôle
 
   constructor(private roleService: RoleService) {}
 
@@ -44,4 +47,30 @@ export class RolesComponent implements OnInit{roles: Role[] = [];
       error => console.error('Erreur lors du chargement des rôles', error)
     );
   }
+
+  addRole() {
+    if (this.newRoleName.trim()) { // Vérifie que le champ n'est pas vide
+      const newRole = { name: this.newRoleName }; // Crée un objet avec le nom du rôle
+      this.roleService.createRole(newRole).subscribe(
+        () => {
+          this.loadRoles(); // Recharge la liste des rôles après l'ajout
+          this.newRoleName = ''; // Réinitialise le champ d'entrée
+        },
+        error => console.error('Erreur lors de la création du rôle', error)
+      );
+    } else {
+      console.error('Le champ du nom du rôle est vide');
+    }
+  }
+
+
+ deleteRole(id: number) {
+  if (confirm('Êtes-vous sûr de vouloir supprimer ce rôle?')) { // Ajouter une confirmation avant la suppression
+    this.roleService.deleteRole(id).subscribe(
+      () => this.loadRoles(),  // Recharger les rôles après la suppression
+      error => console.error('Erreur lors de la suppression du rôle', error)
+    );
+  }
+}
+
 }

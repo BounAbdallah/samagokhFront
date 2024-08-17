@@ -1,9 +1,18 @@
+import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
+import { Observable } from 'rxjs';
 
 @Injectable({
   providedIn: 'root'
 })
 export class CommuneService {
 
-  constructor() { }
+    // url de l'api laravel 
+  private apiUrl='http://127.0.0.1:8000/api/roles'
+
+  constructor(private http:HttpClient) { }
+
+  getCommunes(): Observable<any>{
+    return this.http.get(this.apiUrl);
+  }
 }
