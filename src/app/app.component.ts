@@ -1,5 +1,10 @@
 import { Component } from '@angular/core';
 import { RouterOutlet } from '@angular/router';
+import { NgModule } from '@angular/core';
+import { BrowserModule } from '@angular/platform-browser';
+import { ReactiveFormsModule } from '@angular/forms';
+
+
 import { SideBarComponent } from "./Composants/Maire/side-bar/side-bar.component";
 import { BanniereComponent } from "./Composants/Maire/banniere/banniere.component";
 import { StatistiqueComponent } from "./Composants/Maire/statistique/statistique.component";
@@ -8,11 +13,12 @@ import { NotificationComponent } from "./Composants/Maire/notification/notificat
 import { BarDeRecherheComponent } from "./Composants/Maire/bar-de-recherhe/bar-de-recherhe.component";
 import { DetailsProjetComponent } from "./Composants/Maire/details-projet/details-projet.component";
 import { CommentaireComponent } from "./Composants/Maire/commentaire/commentaire.component";
+import { ProjectFormComponent } from './Composants/Maire/project-form/project-form.component';
 
 @Component({
   selector: 'app-root',
   standalone: true,
-  imports: [RouterOutlet, SideBarComponent, BanniereComponent, StatistiqueComponent, CardProjetComponent, NotificationComponent, BarDeRecherheComponent, DetailsProjetComponent, CommentaireComponent],
+  imports: [RouterOutlet,    ReactiveFormsModule,SideBarComponent, BanniereComponent, StatistiqueComponent, CardProjetComponent, NotificationComponent, BarDeRecherheComponent, DetailsProjetComponent, CommentaireComponent, ProjectFormComponent],
   templateUrl: './app.component.html',
   styleUrl: './app.component.css'
 })
