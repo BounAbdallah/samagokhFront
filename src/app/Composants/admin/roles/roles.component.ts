@@ -15,6 +15,13 @@ interface Role {
   permissions: any[]; // Ajustez selon la structure exacte de vos permissions
 }
 
+
+interface Permission {
+  id: number;
+  name: string;
+}
+
+
 @Component({
   selector: 'app-roles',
   standalone: true,
@@ -28,11 +35,26 @@ export class RolesComponent implements OnInit{
   totalPages: number = 1;
   newRoleName: string = ''; // Nouvelle propriété pour stocker le nom du rôle
 
+  roleEnEdition: Role = { id: 0, name: '', permissions: [] };
+  afficherPopupEdition: boolean = false;
+  toutesLesPermissions: Permission[] = [];
+
   constructor(private roleService: RoleService) {}
 
   ngOnInit(): void {
     this.loadRoles();
+    this.chargerPermissions();
   }
+
+  chargerPermissions() {
+    this.roleService.getPermissions().subscribe(
+      (permissions: Permission[]) => {
+        this.toutesLesPermissions = permissions;
+      },
+      erreur => console.error('Erreur lors du chargement des permissions', erreur)
+    );
+  }
+
 
   loadRoles() {
     this.roleService.getRoles().subscribe(
@@ -72,5 +94,6 @@ export class RolesComponent implements OnInit{
     );
   }
 }
+
 
 }

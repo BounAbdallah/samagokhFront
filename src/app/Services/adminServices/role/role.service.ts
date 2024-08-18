@@ -31,11 +31,27 @@ export class RoleService {
   return this.http.post(this.apiUrl, role);
 }
 
-  updateRole(id:number , role:any):Observable<any>{
-    return this.http.put(`${this.apiUrl}/${id}`,role);
-  }
+  // updateRole(id:number , role:any):Observable<any>{
+  //   return this.http.put(`${this.apiUrl}/${id}`,role);
+  // }
 
   deleteRole(id:number):Observable<any> {
    return this.http.delete(`${this.apiUrl}/${id}`);
+  }
+
+
+
+   // ... méthodes existantes ...
+
+   getPermissions(): Observable<any> {
+    return this.http.get(`${this.apiUrl}/permissions`);
+  }
+
+  getRolePermissions(roleId: number): Observable<any> {
+    return this.http.get(`${this.apiUrl}/roles/${roleId}/permissions`);
+  }
+
+  updateRole(id: number, role: any): Observable<any> {
+    return this.http.put(`${this.apiUrl}/roles/${id}`, role);
   }
 }
