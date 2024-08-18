@@ -36,9 +36,26 @@ body {
   position: relative;
   z-index: 2;
 }
+.logo {
+  width: auto;
+  height: 9.0625rem;
+}
+
+.navbar-nav .nav-link {
+  color: white;
+  font-size: 1.2rem;
+  font-weight: 500;
+  display: flex;
+  align-items: center;
+}
+
+.navbar-nav .nav-link i {
+  margin-right: 0.5rem;
+}
 
 .navbar .navbar-nav .nav-link {
   color: white;
+  margin-left:3rem
 }
 .navbar{
   background-color: #0C3B2E;
@@ -234,5 +251,35 @@ position: relative;
 }
 
 footer{
-  background-image: url(../../../assets/images/Rectangle\ 15.png);
+  background-color:#0C3B2E;
+  color:white;
+  display:flex;
+  justify-content: space-evenly;
+  margin-top:12rem;
+  padding-top:3rem; 
+  font-family: sans-serif;
+}
+.title{
+  font-size: 1.3rem;
+}
+footer p{
+  text-align:center ;
+}
+.btn-send{
+  width: 8.375rem;
+  height: 2.3125rem;
+  border-radius: 0.625rem;
+  background: #FA983A;
+  color:white;
+  font-weight:500;
+  border:none;
+}
+@media (max-width: 768px) {
+  .navbar-brand {
+      margin-right: auto;
+  }
+  .navbar-nav {
+      text-align: center;
+      margin-top: 1rem;
+  }
 }
