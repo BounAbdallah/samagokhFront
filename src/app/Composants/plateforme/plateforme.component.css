@@ -145,3 +145,94 @@ margin-left:3rem
 height: 19.875rem;
 margin-left: 9rem;
 }
+.caisse2{
+  display: flex;
+  justify-content: space-around;
+  margin-top:5rem;
+  margin-bottom: 5rem;
+}
+.box-overlay {
+  position: relative;
+  overflow: hidden;
+  border-radius: 6.25rem 6.25rem 0rem 0rem;
+}
+
+.box-overlay::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5); /* Fond noir avec 50% de transparence */
+  border-radius: 6.25rem 6.25rem 0rem 0rem;
+  z-index: 1; /* Pour que le pseudo-élément soit au-dessus de l'image de fond */
+}
+.box6 h4{
+  margin-top:17rem;
+  color:white;
+  font-weight:500;
+  position: relative;
+  z-index: 2; /* Le texte est au-dessus du fond noir */
+  color: white; /* Assurez-vous que le texte est visible sur le fond noir */
+  width: 20.5625rem;
+  margin-left:1rem
+}
+.box4 h4{
+  margin-top:17rem;
+  width: 19.125rem;
+  color:white;
+  font-weight:500;
+  position: relative;
+  z-index: 2; /* Le texte est au-dessus du fond noir */
+  margin-left:1rem
+}
+.box5 h4{
+  margin-top:17rem;
+  width: 20.5625rem;
+  color:white;
+  font-weight:500;
+  position: relative;
+  z-index: 2; /* Le texte est au-dessus du fond noir */
+  margin-left:1rem
+}
+.box4, .box5, .box6 {
+  width: 22rem;
+  height: 25rem;
+  background-size: cover;
+  background-position: center;
+}
+
+.box4 {
+  background-image: url(../../../assets/images/Rectangle\ 101.png);
+}
+
+.box5 {
+  background-image: url(../../../assets/images/Rectangle\ 102.png);
+}
+
+.box6 {
+  background-image: url(../../../assets/images/Rectangle\ 103.png);
+}
+.btnview{
+  width: 8.375rem;
+height: 2.3125rem;
+border-radius: 0.625rem;
+background: #FA983A;
+color:white;
+font-weight:500;
+border:none;
+position: relative;
+  z-index: 2; /* Le texte est au-dessus du fond noir */;
+  margin-left:1rem
+}
+.caisse3{
+  display:flex;
+  justify-content: space-around;
+  margin-top: 5rem;
+  background-image: url(../../../assets/images/Rectangle\ 100.png);
+}
+
+footer{
+  background-image: url(../../../assets/images/Rectangle\ 15.png);
+}
