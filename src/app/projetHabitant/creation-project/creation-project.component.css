@@ -1,0 +1,172 @@
+/* Structure générale */
+.container {
+    display: flex;
+    height: 100vh;
+    background-color: #f3f6eb;
+  }
+  h2{
+    color: #000;
+    font-family: Montserrat;
+    font-size: 31px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal; 
+    text-align: center;
+ }
+  
+  /* Sidebar */
+  .sidebar {
+    width: 260px;
+    height: 1024px;
+    flex-shrink: 0;
+    border-radius: 0px 12px 12px 0px;
+background: #6D9773;
+  }
+  
+  .logo {
+    margin-bottom: 20px;
+  }
+  
+  .nav ul {
+    list-style: none;
+    padding: 0;
+  }
+  
+  .nav ul li {
+    margin-bottom: 10px;
+    
+  }
+  
+  .nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-size: 16px;
+    color: #000;
+font-family: Montserrat;
+font-size: 24px;
+font-style: normal;
+font-weight: 400;
+line-height: normal;
+padding-top: 60px;
+  }
+  
+  .sidebar.collapsed {
+    transform: translateX(-250px);
+  }
+  
+  .nav.show {
+    display: block;
+  }
+  
+  /* Hamburger menu */
+  .hamburger {
+    display: none;
+    cursor: pointer;
+    margin-bottom: 20px;
+  }
+  
+  .hamburger div {
+    width: 25px;
+    height: 3px;
+    background-color: white;
+    margin: 5px;
+  }
+  
+  /* Formulaire */
+  .form-container {
+    width: 1021px;
+height: 651px;
+flex-shrink: 0;
+border-radius: 26px;
+background: rgba(202, 219, 183, 0.27);
+margin-left: 200px;
+margin-top: 150px;
+  }
+  
+  form {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+    margin-left: 40px;
+    
+  }
+  
+  form input, form textarea {
+    display: flex;
+width: 410px;
+height: 40px;
+padding: 10px;
+align-items: center;
+gap: 10px;
+flex-shrink: 0;
+border-radius: 7px;
+border: 1px solid #6D9773;
+background: rgba(221, 232, 208, 0.20);
+  }
+  
+  button[type="submit"] {
+    display: flex;
+    width: 190px;
+    height: 59px;
+    padding: 10px;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    flex-shrink: 0;
+    color: #FFF;
+    font-family: Montserrat;
+    font-size: 21px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+    border-radius: 7px;
+border: 1px solid rgba(0, 0, 0, 0.35);
+background: #2DB741;
+  }
+  
+  /* Responsivité */
+  @media (max-width: 768px) {
+    .hamburger {
+      display: flex;
+    }
+  
+    .sidebar {
+      position: fixed;
+      top: 0;
+      left: 0;
+      height: 100%;
+      width: 250px;
+      transform: translateX(-250px);
+      z-index: 1000;
+      transition: transform 0.3s ease;
+    }
+  
+    .sidebar.collapsed {
+      transform: translateX(0);
+    }
+  
+    .nav {
+      display: none;
+    }
+  
+    .nav.show {
+      display: block;
+    }
+  
+    .form-container {
+      width: 521px;
+     height: 851px;
+
+      padding: 10px;
+      margin-left: 60px; /* Ajustez en fonction de l'espace nécessaire lorsque le menu est ouvert */
+    }
+  
+    form {
+      grid-template-columns: 1fr;
+    }
+  
+    button[type="submit"] {
+      grid-column: span 1;
+    }
+  }
+  

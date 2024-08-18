@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="creation-project.component.css">
+</head>
+<body>
+    <!-- creation-project.component.html -->
+<div class="container">
+  <!-- [ngClass]="{'collapsed': isCollapsed}" -->
+    <div class="sidebar" >
+      <div class="logo">
+        <!-- Logo ici -->
+      </div>
+      <div class="hamburger" (click)="toggleSidebar()">
+        <div></div>
+        <div></div>
+        <div></div>
+      </div>
+      <!-- [ngClass]="{'show': !isCollapsed}" -->
+      <nav class="nav" >   
+        <ul>
+          <li><a routerLink="/dashboard">Dashboard</a></li>
+          <li><a routerLink="/mes-projets">Mes Projets</a></li>
+          <li><a routerLink="/projets-soumis">Projets soumis</a></li>
+          <li><a routerLink="/nouveau-projet">Nouveau projet</a></li>
+          <li><a routerLink="/deconnexion">Déconnexion</a></li>
+        </ul>
+      </nav>
+    </div>
+
+    <div class="form-container">
+        <h2>Soumettre un projet</h2>
+
+      <form (ngSubmit)="onSubmit()">
+        <input type="text" placeholder="Titre" name="titre" [(ngModel)]="project.titre" required>
+        <input type="text" placeholder="Objectif" name="objectif" [(ngModel)]="project.objectif" required>
+        <input type="text" placeholder="Attente" name="attente" [(ngModel)]="project.attente" required>
+        <input type="text" placeholder="Cible" name="cible" [(ngModel)]="project.cible" required>
+        <textarea placeholder="Description" name="description" [(ngModel)]="project.description" required></textarea>
+        <input type="text" placeholder="photo" name="photo" [(ngModel)]="project.photo" required>
+        <input type="text" placeholder="Categorie" name="categorie" [(ngModel)]="project.categorie" required>
+        <input type="text" placeholder="Budget" name="budget" [(ngModel)]="project.budget" required>
+        <button type="submit">Soumettre</button>
+      </form>
+    </div>
+  </div>
+  
+</body>
+</html>

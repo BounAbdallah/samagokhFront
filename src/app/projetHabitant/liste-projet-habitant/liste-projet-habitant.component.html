@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="liste-projet-habitant.component.css">
+</head>
+<body>
+    <div class="contenu_card">
+        @for (projet of tabprojet; track $index){
+            <div class="card">
+                <img src="" alt="">
+                <div class="contenu">
+                    <h2>{{projet.titre}} </h2>
+                    <p>{{projet.description}}</p>
+                   <div class="elements">
+                    <h4>Vote  3500</h4>
+                    <h4>Vote 3500</h4>
+                    <button>bublier le 17/11/12</button>
+                   </div>      
+                </div>
+              </div>            
+        }
+
+    </div>
+</body>
+</html>
