@@ -9,10 +9,10 @@ import { PageListeProjetMairieComponent } from './Composants/Maire/page-liste-pr
 export const routes: Routes = [
 
 
-  {path: "Dashboard", component: DashboardComponent},
+  {path: "Dashboard", component: DashboardComponent},//tableau de bord
   {path: "detail-projet", component: PageDetailsprojetComponent},
   { path: "Nos-habitants", component: PageListeHabitantsComponent },
   { path: "Projet-soumis", component: PageListeProjetSoumisComponent },
-  { path: "Projet-mairie", component: PageListeProjetMairieComponent },
+  { path: "Projet-mairie", component: PageListeProjetMairieComponent },//projets
 
 ];
