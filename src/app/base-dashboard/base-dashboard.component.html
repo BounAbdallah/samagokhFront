@@ -1,4 +1,88 @@
-body{
+<style>
+    .side-bar{
+        width: 260px;
+        height: 950px;
+        flex-shrink: 0;
+        border-radius: 0px 12px 12px 0px;
+        background: #6D9773;
+    }
+    .logo{
+        width: 176px;
+        height: 150px;
+        flex-shrink: 0;
+        border-radius: 12px;
+        background: url("images/image 3.png") #6D9773 50% / cover no-repeat;
+        margin: auto;
+        /* margin-top: 75px; */
+    }
+    ul li{
+        color: #FFF;
+        font-family: Montserrat;
+        font-size: 25px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: 40px;
+        display: flex;
+        width: 225px;
+        padding: 10px;
+        align-items: center;
+        gap: 10px;
+    }
+    ul li:hover{
+        display: flex;
+        width: 225px;
+        padding: 10px;
+        align-items: center;
+        gap: 10px;
+        border-radius: 4px;
+        background: #FFF;
+        color: #000;
+        margin: auto;
+    }
+    
+    #search-input {
+    width: 700px;
+    height: 50px;
+    margin-left: 100px;
+    margin-top: 10px;
+    padding: 0 15px;
+    border: 1px solid #ced4da;
+    border-radius: 20px;
+    font-size: 16px;
+    outline: none;
+    transition: border-color 0.3s, box-shadow 0.3s;
+  }
+
+  #search-input:focus {
+    border-color: #6D9773;
+    box-shadow: 0 0 0 3px rgba(109, 151, 115, 0.25);
+  }
+ 
+  .profil i{
+    width: 53px;
+    height: 53px;
+    flex-shrink: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 10px;
+    margin-left: 100px;
+  }
+  .profil img{
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    flex-shrink: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 10px;
+    margin-left: 100px;
+    margin-top: 10px;
+    padding: 5px;
+    background-color: #FFF;
+  }
+  body{
     background-color: #D8D8D8;
   }
   .statistique{
@@ -234,3 +318,45 @@ color: #FEB906;
 .btn-edit{
   width: 131px;
 }
+  </style>
+<div class="pages d-flex">
+    <div class="side-bar">
+        <div class="logo">
+            <!-- <img src="images/image 3.png" alt="logo"> -->
+        </div>
+        <ul>
+            <li [routerLink]="['/dashboard']"><i class="fa-solid fa-city" style="color: #FFF;"></i>Dashboard</li>
+            <li [routerLink]="['/communes']"><i class="fa-solid fa-city" style="color: #FFF;"></i>Communes</li>
+            <li [routerLink]="['/permissions']"><i class="fa-solid fa-key fa-flip-horizontal" style="color: #FFF;"></i>Permissions</li>
+            <li [routerLink]="['/roles']"><i class="fa-regular fa-user" style="color: #FFF;"></i>Rôles</li>
+            <li [routerLink]="['/villes']"><i class="fa-solid fa-building" style="color: #FFF;"></i>Villes</li>
+            <li [routerLink]="['/logout']"><i class="fa-solid fa-right-from-bracket" style="color: #FFF;"></i>Déconnexion</li>
+        </ul>
+    </div>
+    <div class="main-container">
+        <!-- recherche progil et cloche -->
+        <div class="nav-bar d-flex   text-center">
+            <input type="text" id="search-input" class="w-8 rounded-lg" placeholder="Rechercher">
+            <div class="profil">
+                <i class="fa-solid fa-bell fa-2xl" style="color: #000; background-color: #FFF;width: 53px;height: 53px;flex-shrink: 0;margin-top: 10px;"class="cloche"></i>  
+            </div>
+
+            <div class="profil">
+                <img src="../../../../assets/images/logo-side-bare.png" alt="profil">
+            </div>
+        </div>
+
+
+ 
+
+        <div class="container mt-5">
+            <div class="row justify-content-center">
+                <div class="col-md-12">
+                  <!-- <div class="card"> -->
+
+                    <!-- Zone pour afficher les composants enfants -->
+                    <router-outlet></router-outlet>
+          
+ </div>
+
+   

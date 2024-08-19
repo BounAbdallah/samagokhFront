@@ -1,0 +1,38 @@
+.card-header{
+    background-color: #6D9773;
+}
+.input{
+    width: 31.25rem;
+    margin-left: 18.75rem;
+}
+.add-role{
+    width: 8.476rem;
+    height: 2.375rem;
+    flex-shrink: 0;
+    border-radius: 0.313rem;
+    background: #FFF;
+    color: #6D9773;
+    font-family: Inter;
+    font-size: 1.125rem;
+    font-style: normal;
+    font-weight: bold;
+    line-height: normal;
+    margin-left: 6.25rem;
+}
+.pages{
+  background-color: #D8D8D8;
+}
+.btn-delete{
+  margin-left: 40px;
+  width: 131px;
+  background-color: #FFF;
+}
+.btn-delete:hover{
+  margin-left: 40px;
+  width: 131px;
+  background-color: red;
+  color: white;
+}
+.btn-edit{
+  width: 131px;
+}
