@@ -88,3 +88,11 @@ line-height: normal;
 .svg-container:hover .svg-path {
   fill: #000000; /* Change to black on hover */
 }
+
+.menu-item img {
+  transition: filter 0.3s ease;
+}
+
+.menu-item:hover img {
+  filter: grayscale(100%);
+}
