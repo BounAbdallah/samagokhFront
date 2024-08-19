@@ -201,9 +201,7 @@ h2{
 }
 
 .card {
-    
-
-    border-radius: 13px;
+border-radius: 13px;
 background: #FFF;
 box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
 width: 370px;
@@ -298,6 +296,59 @@ border: 1px solid white;
 
 /* Styles pour les écrans plus grands */
 @media (min-width: 768px) {
+    body{
+        display: flex;
+        flex-direction: row;
+    }
+
+    .welcome-section {
+        background-image: url(../../assets/images/icons/baniere.png);
+        background-size: cover;
+        width: auto;
+        border-radius: 14px;
+        height: 200px;
+        flex-shrink: 0;
+        margin-left: 200px;
+       
+    }
+
+    .stats {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        margin: 16px 0;
+        margin-left: 160px;
+        margin-top: 50px;
+      }
+      
+
+      .stat-item {
+        background-color: #E6F5E6;
+        padding: 16px;
+        border-radius: 10px;
+        text-align: center;
+        color: #6D9773;
+        font-family: Montserrat;
+        font-size: 24px;
+        font-style: normal;
+        line-height: normal;
+        width: 327px;
+        height: 145px;
+        /* margin: 10px auto; */
+        margin-left: 200px;
+      }
+
+    .welcome-section  p{
+        color: #FFF;
+font-family: Montserrat;
+font-size: 22px;
+font-style: normal;
+font-weight: 500;
+line-height: normal;
+    }
+
+
+
     .header {
         margin-bottom: 40px;
     }
