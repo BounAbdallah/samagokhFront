@@ -8,11 +8,13 @@ import { Observable } from 'rxjs';
 export class CommuneService {
 
     // url de l'api laravel 
-  private apiUrl='http://127.0.0.1:8000/api/roles'
+  private apiUrl='http://127.0.0.1:8000/api/communes'
 
   constructor(private http:HttpClient) { }
 
   getCommunes(): Observable<any>{
     return this.http.get(this.apiUrl);
   }
+
+
 }
