@@ -8,7 +8,7 @@ body {
   padding: 20px;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
-.table thead {
+tr {
   background-color: #618062;
   color: white;
 }
@@ -26,5 +26,8 @@ body {
 .btn-detail:hover {
   background-color: #e6a800;
 }
-
+.ttt {
+  background-color: #618062;
+  color: white;
+}
 
