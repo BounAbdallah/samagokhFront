@@ -13,9 +13,11 @@ import { log } from 'console';
   styleUrl: './list-commune.component.css'
 })
 export class ListCommuneComponent {
+totalCommunes: number = 0;
 constructor(private communeService: CommuneService){}
 ngOnInit(): void {
   this.loadCommunes();
+  this.fetchTotalCommunes();
   
 }
 loadCommunes(){
@@ -25,4 +27,16 @@ this.communeService.getCommunes().subscribe(
   }
 )
 }
+
+fetchTotalCommunes(): void {
+  this.communeService.getTotalCommunes().subscribe(
+    (data: number) => {
+      this.totalCommunes = data;
+    },
+    (error) => {
+      console.error('Error fetching communes count:', error);
+    }
+  );
+}
+
 }

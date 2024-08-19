@@ -6,12 +6,12 @@ import { Observable } from 'rxjs';
   providedIn: 'root'
 })
 export class UserService {
-  private apiUrl = 'https:/http://127.0.0.1:8000/api/users';
+  private apiUrl = 'http://127.0.0.1:8000/api';
 
   constructor(private http: HttpClient) {}
 
   // Method to fetch the total number of users
   getTotalUsers(): Observable<number> {
-    return this.http.get<number>(`${this.apiUrl}/users`);
+    return this.http.get<number>(`${this.apiUrl}/compteUser`);
   }
 }
