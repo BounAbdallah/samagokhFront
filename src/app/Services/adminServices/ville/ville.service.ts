@@ -7,7 +7,7 @@ import { Observable } from 'rxjs';
 })
 export class VilleService {
   private apiUrl='http://127.0.0.1:8000/api'
-
+  private currentVilleId: number | null = null;
   constructor(private http : HttpClient) { }
 
   getVilles():Observable<any>{
@@ -21,4 +21,20 @@ export class VilleService {
    addVille(ville: any): Observable<any> {
     return this.http.post(`${this.apiUrl}/villes`, ville);
   }
+
+
+  // Les fonction pour la modification d'une ville 
+  setCurrentVilleId(id: number): void {
+    this.currentVilleId = id;
+  }
+
+  getCurrentVilleId(): number | null {
+    return this.currentVilleId;
+  }
+
+  // Méthode pour mettre à jour une ville
+  updateVille(id: number, ville: any): Observable<any> {
+    return this.http.put(`${this.apiUrl}/villes/${id}`, ville);
+  }
+
 }

@@ -322,7 +322,77 @@ color: #FEB906;
 .card-modal{
     margin-top: 100px;
 }
+
+.burger-menu {
+        display: none;
+        cursor: pointer;
+        padding: 10px;
+        position: fixed;
+        top: 10px;
+        left: 10px;
+        z-index: 1000;
+    }
+
+    .burger-menu span {
+        display: block;
+        width: 30px;
+        height: 3px;
+        background-color: #000;
+        margin: 6px 0;
+        transition: 0.4s;
+    }
+
+    /* Styles responsives */
+    @media (max-width: 768px) {
+        .side-bar {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: 999;
+            transition: 0.3s;
+        }
+
+        .side-bar.active {
+            display: block;
+        }
+
+        .burger-menu {
+            display: block;
+        }
+
+        .main-container {
+            margin-left: 0;
+            padding-top: 60px; /* Espace pour le menu burger */
+        }
+
+        /* ... (autres styles responsives) ... */
+    }
+
+    /* Animation pour le menu burger */
+    .burger-menu.active span:nth-child(1) {
+        transform: rotate(-45deg) translate(-5px, 6px);
+    }
+
+    .burger-menu.active span:nth-child(2) {
+        opacity: 0;
+    }
+
+    .burger-menu.active span:nth-child(3) {
+        transform: rotate(45deg) translate(-5px, -6px);
+    }
   </style>
+
+  <!-- Ajoutez le menu burger au début du body -->
+<div class="burger-menu" onclick="toggleMenu()">
+  <span></span>
+  <span></span>
+  <span></span>
+</div>
+
+
 <div class="pages d-flex">
     <div class="side-bar">
         <div class="logo">
@@ -372,7 +442,9 @@ color: #FEB906;
   
         <!-- Modal Header -->
         <div class="modal-header">
-          <h4 class="modal-title text-center"><strong>Ajoute une ville</strong></h4>
+          <h4 class="modal-title text-center">
+            <strong>{{ isEditMode ? 'Modifier la ville' : 'Ajouter une ville' }}</strong>
+          </h4>
           <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
         </div>
   
@@ -388,7 +460,8 @@ color: #FEB906;
                 <textarea class="form-control" id="description" rows="3" placeholder="Description" formControlName="description"></textarea>
               </div>
               <div class="modal-footer">
-                <button type="submit" [disabled]="myForm.invalid" class="btn btn-success w-100 " data-bs-dismiss="modal">Ajouter la ville</button>
+                <button type="submit" [disabled]="myForm.invalid" class="btn btn-success w-100 " data-bs-dismiss="modal">
+                    {{ isEditMode ? 'Modifier la ville' : 'Ajouter la ville' }}                </button>
               </div>
           </form>
         </div>
@@ -418,7 +491,7 @@ color: #FEB906;
                     <td>{{ ville.libelle }}</td>
                     <td>{{ ville.description }}</td>
                     <td class="d-flex">
-                      <button class="btn-edit btn btn-success">Modifier</button>
+                      <button class="btn-edit btn btn-success"  (click)="editVille(ville)" data-bs-toggle="modal" data-bs-target="#myModal">Modifier</button>
                       <button class="btn-delete btn btn-outline-danger ml-5" (click)="deleteVille(ville.id)">Supprimer</button>
                     </td>
                 </tr>
@@ -426,4 +499,9 @@ color: #FEB906;
         </table>
  </div>
 
-   
+ <script>
+  function toggleMenu() {
+      document.querySelector('.side-bar').classList.toggle('active');
+      document.querySelector('.burger-menu').classList.toggle('active');
+  }
+</script>
