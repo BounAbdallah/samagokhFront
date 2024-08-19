@@ -5,8 +5,6 @@ import { ListeProjetHabitantComponent } from './projetHabitant/liste-projet-habi
 
 export const routes: Routes = [
 
-
   {path: "Dashboard", component: DashboardComponent},
-  {path:"affichagedesprojets",component:ListeProjetHabitantComponent}
-
+  { path: 'affichagedesprojets', component: ListeProjetHabitantComponent },
 ];

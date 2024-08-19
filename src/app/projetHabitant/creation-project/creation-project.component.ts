@@ -10,7 +10,7 @@ import { projetModel } from '../../Models/projet.model';
   standalone: true,
   imports: [FormsModule],
   templateUrl: './creation-project.component.html',
-  styleUrls: ['./creation-project.component.css']
+  styleUrl: './creation-project.component.css',
 })
 export class CreationProjectComponent implements OnInit {
   // injection de dependance 
