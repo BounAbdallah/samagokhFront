@@ -36,3 +36,7 @@
 .btn-edit{
   width: 131px;
 }
+.main-container {
+    width: 100%;
+    padding-left: 20px; /* Ajustez cette valeur en fonction de la largeur de votre sidebar */
+}
