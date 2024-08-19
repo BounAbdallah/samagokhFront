@@ -1,14 +1,20 @@
 body {
-  background-color: #D3D3D3;
+  background-color: #CADBB7;
 }
 .card-container {
+  border-radius: 10px;
+background: #D9D9D9;
   display: flex;
   flex-wrap: wrap;
   gap: 20px;
   justify-content: center;
   padding: 20px;
+  width: 70rem;
+height: 1051px;
+flex-shrink: 0;
 }
 .card {
+  margin-top: 20px;
   width: 20rem;
   border: none;
   display: flex;
@@ -63,10 +69,25 @@ box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
   display: flex;
   justify-content: center;
   margin-top: 20px;
+  margin-left: 50rem;
 }
 
 
 .btnApprouver{
   display: flex;
   justify-content: space-evenly;
+}
+
+
+.pagination .page-item .page-link {
+  border-radius: 4px;
+border: 1px solid #DFE3E8;
+background: #FFF;
+color: #212B36;
+}
+
+.pagination .page-item.active .page-link {
+  color: #000; /* Texte en noir pour la page active */
+  background-color: #FEB906; /* Couleur de fond pour la page active */
+  border-color: #FEB906; /* Optionnel : bordure de la couleur active */
 }

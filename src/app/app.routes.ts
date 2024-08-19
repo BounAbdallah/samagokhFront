@@ -1,3 +1,4 @@
+import { PageListeProjetSoumisComponent } from './Composants/Maire/page-liste-projet-soumis/page-liste-projet-soumis.component';
 import { Routes } from '@angular/router';
 import path from 'path';
 import { DashboardComponent } from './Composants/Maire/dashboard/dashboard.component'
@@ -10,5 +11,6 @@ export const routes: Routes = [
   {path: "Dashboard", component: DashboardComponent},
   {path: "detail-projet", component: PageDetailsprojetComponent},
   { path: "Nos-habitants", component: PageListeHabitantsComponent },
+  { path: "Projet-soumis", component: PageListeProjetSoumisComponent },
 
 ];
