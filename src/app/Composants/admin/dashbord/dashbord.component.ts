@@ -4,11 +4,12 @@ import { CommuneService } from '../../../Services/adminServices/commune/commune.
 import { CommonModule } from '@angular/common';
 import { SharedService } from '../../../Services/adminServices/shared.service';
 import { VilleService } from '../../../Services/adminServices/ville/ville.service';
+import { RouterModule } from '@angular/router';
 
 @Component({
   selector: 'app-dashbord',
   standalone: true,
-  imports: [CommonModule],
+  imports: [CommonModule,RouterModule],
   templateUrl: './dashbord.component.html',
   styleUrl: './dashbord.component.css'
 })

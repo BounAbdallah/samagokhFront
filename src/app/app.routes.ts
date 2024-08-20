@@ -16,6 +16,7 @@ export const routes: Routes = [
     { path: '', redirectTo: 'dashboard', pathMatch: 'full' },
     { path: 'dashboard', component: DashbordComponent },
     { path: 'communes', component: ListCommuneComponent },
+    { path: 'communes/:id', component: ListCommuneComponent }, // Route for city details
     { path: 'villes', component: VilleComponent },
     { path: 'roles', component: RolesComponent },
     // Ajoutez d'autres routes enfants ici

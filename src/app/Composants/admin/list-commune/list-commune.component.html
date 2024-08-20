@@ -321,4 +321,15 @@ color: #FEB906;
                 <!-- Ajoutez d'autres lignes similaires pour les autres communes -->
             </tbody>
         </table>
+
+        <div *ngIf="ville">
+            <h2>Détails de la ville: {{ ville.titre }}</h2>
+            <p><strong>Population:</strong> {{ ville.population }}</p>
+            <p><strong>Description:</strong> {{ ville.description }}</p>
+            <button routerLink="/communes">Retour à la liste des communes</button>
+          </div>
     <!-- </div> -->
+
+
+   
+      

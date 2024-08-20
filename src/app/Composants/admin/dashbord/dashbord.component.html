@@ -322,7 +322,7 @@ text-align: center;
     <div class="row row-cols-1 row-cols-md-3 g-4 mt-5">
         <div class="col" *ngFor="let card of pagedCards">
           <div class="card h-100">
-            <img [src]="card.imgSrc" class="card-img-top" alt="ville image" (click)="getShowVilles(card.id)">
+            <img [src]="card.imgSrc" class="card-img-top" alt="ville image"  [routerLink]="['/communes', card.id]"  (click)="getShowVilles(card.id)">
             <div class="card-body">
               <h5 class="card-title">{{card.title}}</h5>
             </div>
