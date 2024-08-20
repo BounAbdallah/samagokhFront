@@ -3,6 +3,7 @@ import { UserService } from '../../../Services/adminServices/user/user.service';
 import { CommuneService } from '../../../Services/adminServices/commune/commune.service';
 import { CommonModule } from '@angular/common';
 import { SharedService } from '../../../Services/adminServices/shared.service';
+import { VilleService } from '../../../Services/adminServices/ville/ville.service';
 
 @Component({
   selector: 'app-dashbord',
@@ -12,20 +13,9 @@ import { SharedService } from '../../../Services/adminServices/shared.service';
   styleUrl: './dashbord.component.css'
 })
 export class DashbordComponent  implements OnInit{
-  // @Input() villes: any[] = [];  
   cards: any[] = [];
 
-  // cards = [
-  //   { imgSrc: 'https://img.freepik.com/vecteurs-libre/batiments-ville-moderne_1441-3042.jpg', title: 'Dakar', updated: '3 mins ago' },
-  //   { imgSrc: 'https://img.freepik.com/photos-gratuite/grande-ville_1127-3102.jpg', title: 'Saint-luis', updated: '3 mins ago' },
-  //   { imgSrc: 'https://img.freepik.com/photos-gratuite/vue-aerienne-complexe-ville_23-2148975282.jpg', title: 'Louga', updated: '3 mins ago' },
-  //   { imgSrc: 'https://img.freepik.com/photos-gratuite/grande-ville_1127-3102.jpg?ga=GA1.2.1272467380.1720960746&semt=ais_hybrid', title: 'Fatick', updated: '3 mins ago' },
-  //   { imgSrc: 'https://img.freepik.com/photos-gratuite/acier-entreprise-construction-urbaine-observation_1127-2397.jpg?ga=GA1.2.1272467380.1720960746&semt=ais_hybrid', title: 'Thiès', updated: '3 mins ago' },
-  //   { imgSrc: 'https://img.freepik.com/photos-gratuite/shiny-ville-nuit_1127-8.jpg?ga=GA1.2.1272467380.1720960746&semt=ais_hybrid', title: 'Villes3', updated: '3 mins ago' },
-  //   { imgSrc: 'https://img.freepik.com/photos-gratuite/vue-ville-new-york-au-coucher-du-soleil_23-2151279432.jpg?ga=GA1.2.1272467380.1720960746&semt=ais_hybrid', title: 'Villes3', updated: '3 mins ago' },
-
-  //   // Ajoutez d'autres cartes ici
-  // ];
+  villes: any[] = []; 
 
   // variable de pagination 
   currentPage = 1;
@@ -42,12 +32,13 @@ export class DashbordComponent  implements OnInit{
 
   totalPages = Math.ceil(this.cards.length / this.cardsPerPage);
 
-  constructor(private userService : UserService,private communeService: CommuneService,private sharedService: SharedService){}
+  constructor(private userService : UserService,private communeService: CommuneService,private sharedService: SharedService,private villeService: VilleService){}
 
   ngOnInit(): void {
     this.fetchTotalUsers();
     this.fetchTotalCommunes();
     this.subscribeToVilles();
+    this.fetchVilles();  // Récupérer la liste des villes au démarrage
   }
 //Paginate suivante
   nextPage() {
@@ -63,6 +54,32 @@ export class DashbordComponent  implements OnInit{
     }
   }
 
+    // Méthode pour récupérer les villes
+    fetchVilles() {
+      this.villeService.getVilles().subscribe(
+        (response: any) => {
+          this.villes = response.data || response;
+        },
+        (error: any) => {
+          console.error('Erreur lors de la récupération des villes', error);
+        }
+      );
+    }
+  
+
+     // Méthode pour afficher les détails d'une ville spécifique
+  getShowVilles(id: number) {
+    this.villeService.getShowVilles(id).subscribe(
+      (response: any) => {
+        console.log('Détails de la ville:', response);
+      },
+      (error: any) => {
+        console.error('Erreur lors de la récupération de la ville', error);
+      }
+    );
+  }
+
+
 
   subscribeToVilles() {
     this.sharedService.villes$.subscribe(villes => {
@@ -72,9 +89,9 @@ export class DashbordComponent  implements OnInit{
 
   populateCards(villes: any[]): void {
     this.cards = villes.map(ville => ({
-      imgSrc: 'https://fr.freepik.com/photos-gratuite/new-york-city_26745119.htm#fromView=search&page=1&position=20&uuid=d9bea586-ada9-4494-8593-e9f4f43adf4b', // Remplacez par l'image réelle si disponible
+      imgSrc: 'https://img.freepik.com/photos-gratuite/ville-ciel-bleu_1417-1867.jpg?ga=GA1.2.1272467380.1720960746&semt=ais_hybrid', 
       title: ville.libelle,
-      updated: ville.description
+      updated: ville.description,
     }));
     this.totalPages = Math.ceil(this.cards.length / this.cardsPerPage);
   }
@@ -102,6 +119,8 @@ export class DashbordComponent  implements OnInit{
       }
     );
   }
+
+  
 
 }
 

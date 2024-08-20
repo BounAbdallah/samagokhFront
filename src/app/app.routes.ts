@@ -8,12 +8,7 @@ import { BaseDashboardComponent } from './base-dashboard/base-dashboard.componen
 import { DashbordComponent } from './Composants/admin/dashbord/dashbord.component';
 
 export const routes: Routes = [
-//  { path: 'roles', component: RolesComponent},
-//  { path: 'dashboard', component: DashboardComponent },
-//   //Route par defaut
-//   {path:"",pathMatch:'full',redirectTo:'dashboard'},
-//   { path: 'communes', component: ListCommuneComponent },
-//   { path: 'villes', component:VilleComponent },
+
 {
   path: '',
   component: BaseDashboardComponent,

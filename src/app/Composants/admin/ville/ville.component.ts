@@ -2,8 +2,6 @@ import { Component,OnInit } from '@angular/core';
 import { VilleService } from '../../../Services/adminServices/ville/ville.service';
 import { CommonModule } from '@angular/common';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
-import { response } from 'express';
-import { log } from 'console';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { SharedService } from '../../../Services/adminServices/shared.service';
 
@@ -84,6 +82,13 @@ export class VilleComponent  implements OnInit{
         error => console.error('Erreur lors de la suppression du rôle', error)
       );
     }
+  }
+
+  getShowVilles(id: number) {
+      this.villeService.getShowVilles(id).subscribe(
+        () => this.fetchVilles(),  // Recharger les rôles après la suppression
+        error => console.error('Erreur lors de la récupération de laville', error)
+      );
   }
 
 

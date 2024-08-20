@@ -14,6 +14,10 @@ export class VilleService {
     return this.http.get(`${this.apiUrl}/villes`);
   }
 
+  getShowVilles(id:number):Observable<any>{
+    return this.http.get(`${this.apiUrl}/villes/${id}`);
+  }
+
   deleteVille(id:number):Observable<any> {
     return this.http.delete(`${this.apiUrl}/villes/${id}`);
    }
