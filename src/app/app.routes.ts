@@ -1,4 +1,10 @@
 import { PageListeProjetSoumisComponent } from './Composants/Maire/page-liste-projet-soumis/page-liste-projet-soumis.component';
+// <<<<<<< HEAD
+// =======
+// import { Routes } from '@angular/router';
+// import path from 'path';
+import { ListeProjetHabitantComponent } from './projetHabitant/liste-projet-habitant/liste-projet-habitant.component';
+// >>>>>>> remotes/origin/feature/mbombe
 import { DashboardComponent } from './Composants/Maire/dashboard/dashboard.component'
 import { PageDetailsprojetComponent } from './Composants/Maire/page-detailsprojet/page-detailsprojet.component';
 import { PageListeHabitantsComponent } from './Composants/Maire/page-liste-habitants/page-liste-habitants.component';
@@ -24,9 +30,14 @@ import { Routes } from '@angular/router';
 
 export const routes: Routes = [
 
+// <<<<<<< HEAD
   {path:'SamaGokh',component:PlateformeComponent},
 
   {path: "Dashboard", component: DashboardComponent},//tableau de bord
+// =======
+  // {path: "Dashboard", component: DashboardComponent},
+  { path: 'affichagedesprojets', component: ListeProjetHabitantComponent },
+// >>>>>>> remotes/origin/feature/mbombe
   {path: "detail-projet", component: PageDetailsprojetComponent},
   { path: "Nos-habitants", component: PageListeHabitantsComponent },
   { path: "Projet-soumis", component: PageListeProjetSoumisComponent },

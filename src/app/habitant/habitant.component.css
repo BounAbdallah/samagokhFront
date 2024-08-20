@@ -1,0 +1,405 @@
+/* sidebar */
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+.sidebar {
+  background-color: #618062; /* Background color */
+  color: #fff;
+  width: 250px;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  height: 100vh;
+  border-radius: 0px 12px 12px 0px;
+  background: #6D9773;
+  overflow-y: hidden;
+  color: #FFF;
+font-family: Montserrat;
+font-size: 18px;
+font-style: normal;
+font-weight: 400;
+line-height: normal;
+}
+
+.logo img {
+  max-width: 100%;
+  margin-bottom: 20px;
+  border-radius: 50%; /* Making the logo circular if needed */
+}
+
+.menu {
+  width: 100%;
+}
+
+.menu-item {
+  display: flex;
+  align-items: center;
+  padding: 15px;
+  color: #fff;
+  text-decoration: none;
+  font-size: 1.1em;
+  font-weight: 500;
+  margin-bottom: 10px;
+  border-radius: 5px;
+}
+
+.menu-item.active, .menu-item:hover {
+  background-color: #ffffff; /* Highlight color for active/hovered menu items */
+  color: #000; /* Text color when active/hovered */
+}
+.menu-item svg:hover
+{
+  color: #000;
+}
+
+.menu-item i {
+  margin-right: 10px;
+  font-size: 1.2em; /* Icon size */
+}
+
+/* Placeholder for icons (use actual icons/fonts or images) */
+.icon-dashboard:before {
+  content: ''; /* Dashboard icon placeholder */
+}
+
+.icon-projects:before {
+  content: ''; /* Projects icon placeholder */
+}
+
+.icon-inhabitants:before {
+  content: ''; /* Inhabitants icon placeholder */
+}
+
+.icon-new-project:before {
+  content: ""; /* New project icon placeholder */
+}
+
+.icon-submitted-projects:before {
+  content: ''; /* Submitted projects icon placeholder */
+}
+
+.icon-logout:before {
+  content: ''; /* Logout icon placeholder */
+}
+
+.svg-container {
+  display: inline-block;
+}
+
+.svg-container:hover .svg-path {
+  fill: #000000; /* Change to black on hover */
+}
+/* corps */
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    overflow-x: hidden;
+    background-color: #f4f4f4; /* Ajouter un fond clair */
+}
+
+h2{
+    text-align: center;
+}
+/* Conteneur principal */
+.container {
+    padding: 16px;
+    max-width: 100%; /* Assurez-vous que le conteneur est bien adapté au mobile */
+}
+
+/* En-tête */
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.menu-btn, .icon {
+    background: none;
+    border: none;
+    font-size: 24px;
+    cursor: pointer;
+}
+
+/* Barre de recherche */
+.search-bar {
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.search-bar input {
+    flex: 1;
+    padding: 8px;
+    font-size: 16px;
+    border-radius: 20px;
+    border: 1px solid #ccc;
+}
+
+.search-icon {
+    background: none;
+    border: none;
+    font-size: 20px;
+    margin-left: 8px;
+    cursor: pointer;
+}
+
+/* Section de bienvenue */
+.welcome-section {
+    background-image: url(../../assets/images/icons/baniere.png);
+    background-size: cover;
+    padding: 16px;
+    border-radius: 10px;
+    text-align: center;
+    color: #fff;
+    margin-bottom: 20px;
+}
+
+/* Bouton de création de projet */
+.create-project-btn {
+    background: #FEB906;
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 20px;
+    cursor: pointer;
+    margin-top: 8px;
+    font-size: 16px;
+}
+
+/* Statistiques */
+.stats {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    margin: 16px 0;
+  }
+  
+  .stat-item {
+    background-color: #E6F5E6;
+    padding: 16px;
+    border-radius: 10px;
+    text-align: center;
+    color: #6D9773;
+    font-family: Montserrat;
+    font-size: 24px;
+    font-style: normal;
+    line-height: normal;
+    width: 257px;
+    height: 145px;
+    margin: 10px auto;
+  }
+  
+  /* Desktop View */
+  
+
+/* Section des projets */
+.projects-section {
+    margin-bottom: 20px;
+}
+
+.card {
+border-radius: 13px;
+background: #FFF;
+box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+width: 370px;
+height: 177px;
+flex-shrink: 0;
+margin-top: 30px;
+}
+
+
+.card-content {
+    display: flex;
+    align-items: center;
+    
+}
+
+.profile-img {
+    border-radius: 50%;
+    width: 70px;
+    height: 70px;
+    margin-top: 20px;
+    margin-right: 20px;
+    margin-left: 12px;
+}
+
+.card-text h4{
+    margin: 0;
+    color: rgba(12, 59, 46, 0.74);
+}
+
+.card-text p {
+    margin: 5px 0 0;
+    color: #8E8989;
+}
+
+/* Actions de la carte */
+.card-actions {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 20px;
+}
+
+.card-actions .btn {
+       display: flex;
+width: 130px;
+height: 40px;
+padding: 10px;
+margin: 0 30px; 
+justify-content: center;
+align-items: flex-start;
+gap: 10px;
+flex-shrink: 0;
+border-radius: 12px;
+background: #FFF;
+box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+border: 1px solid white;
+}
+
+
+
+.btn-approve {
+    color: #27ae60;
+}
+
+.btn-view {
+    color: #2c3e50;
+
+}
+
+/* Pagination */
+.pagination {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 20px;
+}
+
+.page-number, .prev-page, .next-page {
+    border-radius: 5px;
+    border: 1px solid #FEB906;
+    background: #FFF;
+    margin: 0 4px;
+    cursor: pointer; 
+    padding: 8px 16px;
+}
+
+.menu-btn {
+    display: none; /* Hide burger menu button by default */
+  }
+  
+  .sidebar {
+    display: none; /* Hide sidebar by default */
+  }
+
+/* Styles pour les écrans plus grands */
+@media (min-width: 768px) {
+    body{
+        display: flex;
+        flex-direction: row;
+    }
+
+    .welcome-section {
+        background-image: url(../../assets/images/icons/baniere.png);
+        background-size: cover;
+        width: auto;
+        border-radius: 14px;
+        height: 200px;
+        flex-shrink: 0;
+        margin-left: 200px;
+       
+    }
+
+    .stats {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        margin: 16px 0;
+        margin-left: 160px;
+        margin-top: 50px;
+      }
+      
+
+      .stat-item {
+        background-color: #E6F5E6;
+        padding: 16px;
+        border-radius: 10px;
+        text-align: center;
+        color: #6D9773;
+        font-family: Montserrat;
+        font-size: 24px;
+        font-style: normal;
+        line-height: normal;
+        width: 327px;
+        height: 145px;
+        /* margin: 10px auto; */
+        margin-left: 200px;
+      }
+
+    .welcome-section  p{
+        color: #FFF;
+font-family: Montserrat;
+font-size: 22px;
+font-style: normal;
+font-weight: 500;
+line-height: normal;
+    }
+
+
+
+    .header {
+        margin-bottom: 40px;
+    }
+
+    .search-bar input {
+        flex: 1;
+        padding: 8px;
+        width: 200px;
+        font-size: 16px;
+        border-radius: 20px;
+        border: 1px solid #ccc;
+    }
+
+    .stats {
+        flex-direction: row;
+      }
+      .stat-item {
+        margin: 0 10px;
+      }
+    .projects-section {
+        display: flex;
+        flex-wrap: wrap;
+    }
+
+    .card {
+        flex: 1 1 calc(33.333% - 20px);
+        margin-right: 20px;
+    }
+
+    .card:last-child {
+        margin-right: 0;
+    }
+}
+
+@media (max-width: 767px) {
+    .menu-btn {
+      display: block; /* Show burger menu button on mobile */
+    }
+  
+    .sidebar {
+      display: none; /* Keep the sidebar hidden on mobile */
+    }
+  }
+  
+  /* Desktop styles */
+  @media (min-width: 768px) {
+    .menu-btn {
+      display: none; /* Hide burger menu button on desktop */
+    }
+  
+    .sidebar {
+      display: flex; /* Show sidebar on desktop */
+    }
+  }
