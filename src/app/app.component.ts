@@ -14,11 +14,13 @@ import { ProjectFormComponent } from './Composants/Maire/project-form/project-fo
 import { ListeHabitantsComponent } from "./Composants/Maire/liste-habitants/liste-habitants.component";
 import { ListeProjetSoumisComponent } from "./Composants/Maire/liste-projet-soumis/liste-projet-soumis.component";
 import { CardProjetMairieComponent } from "./Composants/Maire/card-projet-mairie/card-projet-mairie.component";
+import { CreationProjectComponent } from './projetHabitant/creation-project/creation-project.component';
+import { ListeProjetHabitantComponent } from './projetHabitant/liste-projet-habitant/liste-projet-habitant.component';
 
 @Component({
   selector: 'app-root',
   standalone: true,
-  imports: [RouterOutlet, ReactiveFormsModule, SideBarComponent, BanniereComponent, StatistiqueComponent, CardProjetComponent, NotificationComponent, BarDeRecherheComponent, DetailsProjetComponent, CommentaireComponent, ProjectFormComponent, ListeHabitantsComponent, ListeProjetSoumisComponent, CardProjetMairieComponent],
+  imports: [RouterOutlet, ReactiveFormsModule, SideBarComponent, BanniereComponent, StatistiqueComponent, CardProjetComponent, NotificationComponent, BarDeRecherheComponent, DetailsProjetComponent, CommentaireComponent, ProjectFormComponent, ListeHabitantsComponent, ListeProjetSoumisComponent, CardProjetMairieComponent,CreationProjectComponent,ListeProjetSoumisComponent,ListeProjetHabitantComponent],
   templateUrl: './app.component.html',
   styleUrl: './app.component.css'
 })

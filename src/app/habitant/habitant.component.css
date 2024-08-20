@@ -1,405 +1,331 @@
-/* sidebar */
-@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
-
-.sidebar {
-  background-color: #618062; /* Background color */
-  color: #fff;
-  width: 250px;
-  padding: 20px;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  height: 100vh;
-  border-radius: 0px 12px 12px 0px;
-  background: #6D9773;
-  overflow-y: hidden;
-  color: #FFF;
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Arial, sans-serif;
+}
+ .projects-section h2{
+  color: #000;
 font-family: Montserrat;
-font-size: 18px;
+font-size: 24px;
 font-style: normal;
-font-weight: 400;
+font-weight: 600;
 line-height: normal;
 }
 
-.logo img {
-  max-width: 100%;
-  margin-bottom: 20px;
-  border-radius: 50%; /* Making the logo circular if needed */
-}
+/* body {
+  display: flex;
+  min-height: 100vh;
+} */
 
-.menu {
+.container {
+  display: flex;
+  flex-direction: row;
   width: 100%;
 }
 
-.menu-item {
-  display: flex;
-  align-items: center;
-  padding: 15px;
-  color: #fff;
+.sidebar {
+  background-color: #a7c1a6;
+  padding: 20px;
+  min-width: 200px;
+  height: 100vh;
+  flex-shrink: 0;
+}
+
+.sidebar nav ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+.sidebar nav ul li {
+  margin: 20px 0;
+}
+
+.sidebar nav ul li a {
   text-decoration: none;
-  font-size: 1.1em;
-  font-weight: 500;
-  margin-bottom: 10px;
-  border-radius: 5px;
+  color: #fff;
+  font-weight: bold;
 }
 
-.menu-item.active, .menu-item:hover {
-  background-color: #ffffff; /* Highlight color for active/hovered menu items */
-  color: #000; /* Text color when active/hovered */
-}
-.menu-item svg:hover
-{
-  color: #000;
-}
-
-.menu-item i {
-  margin-right: 10px;
-  font-size: 1.2em; /* Icon size */
-}
-
-/* Placeholder for icons (use actual icons/fonts or images) */
-.icon-dashboard:before {
-  content: ''; /* Dashboard icon placeholder */
-}
-
-.icon-projects:before {
-  content: ''; /* Projects icon placeholder */
-}
-
-.icon-inhabitants:before {
-  content: ''; /* Inhabitants icon placeholder */
-}
-
-.icon-new-project:before {
-  content: ""; /* New project icon placeholder */
-}
-
-.icon-submitted-projects:before {
-  content: ''; /* Submitted projects icon placeholder */
-}
-
-.icon-logout:before {
-  content: ''; /* Logout icon placeholder */
-}
-
-.svg-container {
-  display: inline-block;
-}
-
-.svg-container:hover .svg-path {
-  fill: #000000; /* Change to black on hover */
-}
-/* corps */
-body {
-    font-family: 'Arial', sans-serif;
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    overflow-x: hidden;
-    background-color: #f4f4f4; /* Ajouter un fond clair */
-}
-
-h2{
-    text-align: center;
-}
-/* Conteneur principal */
-.container {
-    padding: 16px;
-    max-width: 100%; /* Assurez-vous que le conteneur est bien adapté au mobile */
-}
-
-/* En-tête */
 .header {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    margin-bottom: 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px;
+  background-color: #f5f5f5;
+  width: 100%;
 }
 
-.menu-btn, .icon {
-    background: none;
-    border: none;
-    font-size: 24px;
-    cursor: pointer;
+.burger {
+  display: none;
+  flex-direction: column;
+  cursor: pointer;
 }
 
-/* Barre de recherche */
-.search-bar {
-    display: flex;
-    align-items: center;
-    margin-bottom: 20px;
+.burger span {
+  width: 25px;
+  height: 3px;
+  background: #333;
+  margin: 4px;
 }
 
 .search-bar input {
-    flex: 1;
-    padding: 8px;
-    font-size: 16px;
-    border-radius: 20px;
-    border: 1px solid #ccc;
+  display: flex;
+width: 560px;
+padding: 12px 10px;
+align-items: center;
+gap: 38px;
+border-radius: 30px;
+border: 1px solid #8E8989;
+background: #FFF;
 }
 
-.search-icon {
-    background: none;
-    border: none;
-    font-size: 20px;
-    margin-left: 8px;
-    cursor: pointer;
+.user-info {
+  display: flex;
+  align-items: center;
 }
 
-/* Section de bienvenue */
+.user-info img {
+  margin-left: 10px;
+  border-radius: 50%;
+}
+
+.main-content {
+  padding: 20px;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  width: calc(100% - 200px); /* Take remaining space */
+  text-align: center;
+  padding-right: 30rem;
+}
+
+
+/* Existing styles omitted for brevity */
+
 .welcome-section {
-    background-image: url(../../assets/images/icons/baniere.png);
-    background-size: cover;
-    padding: 16px;
-    border-radius: 10px;
-    text-align: center;
-    color: #fff;
-    margin-bottom: 20px;
+  background: #e8f4e3;
+  width: 839px; 
+  height: 200px; 
+  border-radius: 10px;
+  text-align: left; /* Align text to the left */
+  margin: 20px auto; 
+  flex-shrink: 0; 
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start; /* Align content to the left */
+  padding-left: 20px; /* Add padding to space out from the left edge */
 }
 
-/* Bouton de création de projet */
-.create-project-btn {
-    background: #FEB906;
-    color: #fff;
-    padding: 10px 20px;
-    border: none;
-    border-radius: 20px;
-    cursor: pointer;
-    margin-top: 8px;
-    font-size: 16px;
+.welcome-section h1 {
+  color: #FFF;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 26px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: normal;
+  margin-bottom: 10px; /* Add some spacing after the title */
 }
 
-/* Statistiques */
-.stats {
-    display: flex;
-    flex-direction: column;
-    justify-content: space-around;
-    margin: 16px 0;
-  }
-  
-  .stat-item {
-    background-color: #E6F5E6;
-    padding: 16px;
-    border-radius: 10px;
-    text-align: center;
-    color: #6D9773;
-    font-family: Montserrat;
-    font-size: 24px;
-    font-style: normal;
-    line-height: normal;
-    width: 257px;
-    height: 145px;
-    margin: 10px auto;
-  }
-  
-  /* Desktop View */
-  
+.welcome-section p {
+  color: #FFF;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 18px; /* Adjust size if needed */
+  margin-bottom: 20px; /* Add spacing between the message and the button */
+}
 
-/* Section des projets */
+.welcome-section button {
+  display: inline-flex;
+  padding: 10px;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  border-radius: 12px;
+  background: #FEB906;
+  color: #FFF;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 16px;
+  font-weight: 600;
+  border: none;
+  cursor: pointer;
+  margin-right: 20px; /* Ajoute une marge droite de 20px */
+}
+
+
+/* Existing styles omitted for brevity */
+
+
+.stats-section {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 20px;
+}
+
+
+.stat {
+  background: #d2e2cf;
+  width: 257px;
+  height: 145px;
+  text-align: center;
+  border-radius: 10px;
+  flex-shrink: 0;
+  margin-right: 10px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  color: #6D9773; /* Text color */
+  font-family: 'Montserrat', sans-serif; /* Font family */
+  font-size: 24px; /* Font size */
+  font-style: normal;
+  font-weight: 600; /* Font weight */
+  line-height: normal; /* Line height */
+}
+
 .projects-section {
-    margin-bottom: 20px;
+  background: #f5f5f5;
+  padding: 20px;
+  border-radius: 10px;
 }
 
-.card {
-border-radius: 13px;
-background: #FFF;
-box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
-width: 370px;
-height: 177px;
-flex-shrink: 0;
-margin-top: 30px;
-}
-
-
-.card-content {
+.project-card {
     display: flex;
-    align-items: center;
-    
-}
-
-.profile-img {
-    border-radius: 50%;
-    width: 70px;
-    height: 70px;
     margin-top: 20px;
-    margin-right: 20px;
-    margin-left: 12px;
-}
-
-.card-text h4{
-    margin: 0;
-    color: rgba(12, 59, 46, 0.74);
-}
-
-.card-text p {
-    margin: 5px 0 0;
-    color: #8E8989;
-}
-
-/* Actions de la carte */
-.card-actions {
-    display: flex;
-    justify-content: space-between;
-    margin-top: 20px;
-}
-
-.card-actions .btn {
-       display: flex;
-width: 130px;
-height: 40px;
-padding: 10px;
-margin: 0 30px; 
-justify-content: center;
-align-items: flex-start;
-gap: 10px;
-flex-shrink: 0;
-border-radius: 12px;
-background: #FFF;
-box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
-border: 1px solid white;
-}
-
-
-
-.btn-approve {
-    color: #27ae60;
-}
-
-.btn-view {
-    color: #2c3e50;
-
-}
-
-/* Pagination */
-.pagination {
-    display: flex;
-    justify-content: center;
-    margin-bottom: 20px;
-}
-
-.page-number, .prev-page, .next-page {
-    border-radius: 5px;
-    border: 1px solid #FEB906;
+    flex-direction: column; /* Align items vertically */
+    align-items: flex-start; /* Align items to the start (left) */
+    gap: 15px; /* Space between elements */
+    padding: 20px; /* Padding inside the card */
+    border-radius: 13px;
     background: #FFF;
-    margin: 0 4px;
-    cursor: pointer; 
-    padding: 8px 16px;
+    box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+    width: 658px; /* Adjust the width as needed */
+    height: auto; /* Allow the height to adjust based on content */
 }
 
-.menu-btn {
-    display: none; /* Hide burger menu button by default */
+.project-info {
+  display: flex;
+  align-items: center;
+}
+
+.project-info img {
+  margin-right: 10px;
+  border-radius: 50%;
+  margin-top: 30px;
+  margin-right: 2rem;
+}
+
+.project-actions {
+  display: flex;
+  gap: 10px;
+}
+
+.approve {
+  background-color: #5db075;
+  padding: 10px 20px;
+  border: none;
+  color: white;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.see-more {
+  background-color: #ddd;
+  padding: 10px 20px;
+  border: none;
+  color: #333;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+/* Existing styles omitted for brevity */
+
+.project-details h4 {
+  color: rgba(12, 59, 46, 0.74); /* Title color */
+  font-family: 'Montserrat', sans-serif; /* Font family */
+  font-size: 25px; /* Font size */
+  font-style: normal;
+  font-weight: 700; /* Font weight */
+  line-height: normal;
+  margin-bottom: 10px; /* Optional: spacing after the title */
+}
+
+.project-details p, span{
+  color: #8E8989; /* Paragraph color */
+  font-family: 'Montserrat', sans-serif;
+  font-size: 13px; /* Font size */
+  font-style: normal;
+  font-weight: 400; /* Font weight */
+  line-height: normal;
+  margin-bottom: 15px; /* Optional: spacing after the paragraph */
+}
+
+.project-actions button {
+  display: flex;
+  width: 185px;
+  height: 45px;
+  padding: 10px;
+  margin-left: 130px;
+  margin-top: 20px;
+  justify-content: center;
+  align-items: flex-start;
+  gap: 10px;
+  flex-shrink: 0;
+  border-radius: 12px;
+  background: #FFF;
+  box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+  color: #000; /* Button text color */
+  font-family: 'Montserrat', sans-serif;
+  font-size: 14px; /* Optional: Adjust font size */
+  font-weight: 600; /* Optional: Font weight */
+  border: none;
+  cursor: pointer;
+}
+
+.project-actions button:last-child {
+  /* Styles spécifiques pour le dernier bouton */
+  margin-left: 20px; /* Exemple de marge spécifique */
+}
+
+/* Existing styles omitted for brevity */
+
+
+
+
+@media screen and (max-width: 768px) {
+  .container {
+      flex-direction: column;
   }
-  
+
   .sidebar {
-    display: none; /* Hide sidebar by default */
+      display: none;
+      position: absolute;
+      z-index: 1000;
+      left: 0;
+      top: 0;
+      height: 100%;
+      width: 200px;
   }
 
-/* Styles pour les écrans plus grands */
-@media (min-width: 768px) {
-    body{
-        display: flex;
-        flex-direction: row;
-    }
+  .burger {
+      display: flex;
+  }
 
-    .welcome-section {
-        background-image: url(../../assets/images/icons/baniere.png);
-        background-size: cover;
-        width: auto;
-        border-radius: 14px;
-        height: 200px;
-        flex-shrink: 0;
-        margin-left: 200px;
-       
-    }
+  .header {
+      justify-content: space-between;
+      padding: 10px;
+  }
 
-    .stats {
-        display: flex;
-        flex-direction: column;
-        justify-content: space-around;
-        margin: 16px 0;
-        margin-left: 160px;
-        margin-top: 50px;
-      }
-      
+  .main-content {
+      padding: 10px;
+      width: 100%;
+  }
 
-      .stat-item {
-        background-color: #E6F5E6;
-        padding: 16px;
-        border-radius: 10px;
-        text-align: center;
-        color: #6D9773;
-        font-family: Montserrat;
-        font-size: 24px;
-        font-style: normal;
-        line-height: normal;
-        width: 327px;
-        height: 145px;
-        /* margin: 10px auto; */
-        margin-left: 200px;
-      }
+  .stats-section {
+      flex-direction: column;
+  }
 
-    .welcome-section  p{
-        color: #FFF;
-font-family: Montserrat;
-font-size: 22px;
-font-style: normal;
-font-weight: 500;
-line-height: normal;
-    }
-
-
-
-    .header {
-        margin-bottom: 40px;
-    }
-
-    .search-bar input {
-        flex: 1;
-        padding: 8px;
-        width: 200px;
-        font-size: 16px;
-        border-radius: 20px;
-        border: 1px solid #ccc;
-    }
-
-    .stats {
-        flex-direction: row;
-      }
-      .stat-item {
-        margin: 0 10px;
-      }
-    .projects-section {
-        display: flex;
-        flex-wrap: wrap;
-    }
-
-    .card {
-        flex: 1 1 calc(33.333% - 20px);
-        margin-right: 20px;
-    }
-
-    .card:last-child {
-        margin-right: 0;
-    }
+  .project-card {
+      flex-direction: column;
+  }
 }
-
-@media (max-width: 767px) {
-    .menu-btn {
-      display: block; /* Show burger menu button on mobile */
-    }
-  
-    .sidebar {
-      display: none; /* Keep the sidebar hidden on mobile */
-    }
-  }
-  
-  /* Desktop styles */
-  @media (min-width: 768px) {
-    .menu-btn {
-      display: none; /* Hide burger menu button on desktop */
-    }
-  
-    .sidebar {
-      display: flex; /* Show sidebar on desktop */
-    }
-  }

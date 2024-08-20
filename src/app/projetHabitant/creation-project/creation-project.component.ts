@@ -27,16 +27,17 @@ export class CreationProjectComponent implements OnInit {
   // methode pour la creation d'un projet 
   ajoutProject(){
     let formdata = new FormData();
-    if(this.project.titre && this.project.attente && this.project.budget && this.project.categorie && this.project.cible && this.project.description && this.project.etat && this.project.statut && this.project.photo ){
+    if(this.project.titre && this.project.attente && this.project.objectif && this.project.budget  && this.project.user_id && this.project.categorie && this.project.cible && this.project.description &&   this.project.image ){
       formdata.append("titre",this.project.titre);
       formdata.append("attente",this.project.attente);
       formdata.append("budget",this.project.budget);
       formdata.append("categorie",this.project.categorie);
       formdata.append("cible",this.project.cible);
       formdata.append("description",this.project.description);
-      formdata.append("etat",this.project.etat);
-      formdata.append("statut",this.project.statut);
-      formdata.append("photo",this.project.photo) ; 
+      formdata.append("photo",this.project.image) ; 
+      formdata.append("objectif",this.project.objectif) ; 
+      formdata.append("user_id", this.project.user_id.toString());
+
     }
 
     this.CreationProjectService.createProjet(formdata).subscribe(

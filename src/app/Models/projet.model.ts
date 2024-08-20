@@ -5,7 +5,7 @@ export interface projetModel{
     description?:string;
     objectif?:string;
     attente?:string;
-    photo?:string;
+    image?:string;
     cible?:string;
     categorie?:string;
     statut?:string;

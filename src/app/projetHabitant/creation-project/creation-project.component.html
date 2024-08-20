@@ -73,16 +73,18 @@
     <div class="form-container">
         <h2>Soumettre un projet</h2>
 
-      <form (ngSubmit)="onSubmit()">
-        <input type="text" placeholder="Titre" name="titre" [(ngModel)]="project.titre" required>
-        <input type="text" placeholder="Objectif" name="objectif" [(ngModel)]="project.objectif" required>
-        <input type="text" placeholder="Attente" name="attente" [(ngModel)]="project.attente" required>
-        <input type="text" placeholder="Cible" name="cible" [(ngModel)]="project.cible" required>
-        <textarea placeholder="Description" name="description" [(ngModel)]="project.description" required></textarea>
-        <input type="text" placeholder="photo" name="photo" [(ngModel)]="project.photo" required>
-        <input type="text" placeholder="Categorie" name="categorie" [(ngModel)]="project.categorie" required>
-        <input type="text" placeholder="Budget" name="budget" [(ngModel)]="project.budget" required>
-        <button type="submit">Soumettre</button>
+      <form>
+        <input type="text" placeholder="Titre" name="titre" [(ngModel)]="project.titre" >
+        <input type="text" placeholder="Objectif" name="objectif" [(ngModel)]="project.objectif" >
+        <input type="text" placeholder="Attente" name="attente" [(ngModel)]="project.attente" >
+        <input type="text" placeholder="Cible" name="cible" [(ngModel)]="project.cible" >
+        <textarea placeholder="Description" name="description" [(ngModel)]="project.description" ></textarea>
+        <input type="text" placeholder="photo" name="photo" [(ngModel)]="project.image" >
+        <input type="text" placeholder="Categorie" name="categorie" [(ngModel)]="project.categorie" >
+        <input type="text" placeholder="Budget" name="budget" [(ngModel)]="project.budget" >
+        <input type="text" placeholder="user_id" name="budget" [(ngModel)]="project.user_id" >
+
+        <button type="submit" (click)="ajoutProject()">Soumettre</button>
       </form>
     </div>
   </div>
