@@ -17,7 +17,7 @@ export const routes: Routes = [
   { path: "Projet-mairie", component: PageListeProjetMairieComponent },
 // route pour habitant
   { path: 'affichagedesprojets', component: ListeProjetHabitantComponent },
-  {path:"ajouterprojet",component:CreationProjectComponent}
+  {path:"ajouterprojet",component:CreationProjectComponent},
 
 
   {path: "Dashboard", component: DashboardComponent},//tableau de bord
