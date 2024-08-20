@@ -46,7 +46,7 @@ export const routes: Routes = [
   path: '',
   component: BaseDashboardComponent,
   children: [
-    { path: '', redirectTo: 'dashboard', pathMatch: 'full' },
+    // { path: '', redirectTo: 'dashboard', pathMatch: 'full' },
     { path: 'dashboard', component: DashbordComponent },
     { path: 'communes', component: ListCommuneComponent },
     { path: 'villes', component: VilleComponent },
@@ -55,5 +55,5 @@ export const routes: Routes = [
   ]
 }
 
-// >>>>>>> remotes/origin/feature/admin
+
 ];
