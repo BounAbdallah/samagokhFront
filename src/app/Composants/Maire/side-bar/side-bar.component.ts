@@ -1,11 +1,12 @@
 import { Component } from '@angular/core';
+import { RouterModule } from '@angular/router';  // Import RouterModule
 
 @Component({
   selector: 'app-side-bar',
   standalone: true,
-  imports: [],
+  imports: [RouterModule],  // Include RouterModule in the imports array
   templateUrl: './side-bar.component.html',
-  styleUrl: './side-bar.component.css'
+  styleUrls: ['./side-bar.component.css']
 })
 export class SideBarComponent {
 

@@ -20,7 +20,7 @@ import { ListeProjetHabitantComponent } from './projetHabitant/liste-projet-habi
 @Component({
   selector: 'app-root',
   standalone: true,
-  imports: [RouterOutlet, ReactiveFormsModule, SideBarComponent, BanniereComponent, StatistiqueComponent, CardProjetComponent, NotificationComponent, BarDeRecherheComponent, DetailsProjetComponent, CommentaireComponent, ProjectFormComponent, ListeHabitantsComponent, ListeProjetSoumisComponent, CardProjetMairieComponent,CreationProjectComponent,ListeProjetSoumisComponent,ListeProjetHabitantComponent],
+  imports: [RouterOutlet, ReactiveFormsModule, SideBarComponent, BanniereComponent, StatistiqueComponent, CardProjetComponent, NotificationComponent, BarDeRecherheComponent, DetailsProjetComponent, CommentaireComponent, ProjectFormComponent, ListeHabitantsComponent, ListeProjetSoumisComponent, CardProjetMairieComponent],
   templateUrl: './app.component.html',
   styleUrl: './app.component.css'
 })

@@ -20,4 +20,10 @@ export const routes: Routes = [
   {path:"ajouterprojet",component:CreationProjectComponent}
 
 
+  {path: "Dashboard", component: DashboardComponent},//tableau de bord
+  {path: "detail-projet", component: PageDetailsprojetComponent},
+  { path: "Nos-habitants", component: PageListeHabitantsComponent },
+  { path: "Projet-soumis", component: PageListeProjetSoumisComponent },
+  { path: "Projet-mairie", component: PageListeProjetMairieComponent },//projets
+
 ];
