@@ -5,6 +5,7 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { response } from 'express';
 import { log } from 'console';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
+import { SharedService } from '../../../Services/adminServices/shared.service';
 
 interface Ville {
   id: number;
@@ -19,7 +20,7 @@ interface Ville {
   templateUrl: './ville.component.html',
   styleUrl: './ville.component.css'
 })
-export class VilleComponent {
+export class VilleComponent  implements OnInit{
 
   myForm: FormGroup;
   villes: Ville[] = [];
@@ -27,7 +28,7 @@ export class VilleComponent {
   isEditMode: boolean = false;
 
   
-  constructor(private villeService: VilleService, private fb: FormBuilder) {
+  constructor(private villeService: VilleService, private fb: FormBuilder ,private sharedService: SharedService) {
     this.myForm = this.fb.group({
       libelle: ['', Validators.required],
       description: ['', Validators.required]
@@ -40,20 +41,41 @@ export class VilleComponent {
     this.fetchVilles();
   }
 
-  fetchVilles(){
+  // onVillesChange(villes: any[]): void {
+  //   this.villes = villes;
+  // }
+
+
+
+  // fetchVilles(){
+  //   this.villeService.getVilles().subscribe(
+  //     (response:any)=>{
+  //       console.log(response.data);
+  //       this.villes = response;
+  //       if(response.data)
+  //         this.villes = response.data;
+  //         },
+  //         (error:any)=>{
+  //           console.log(error);
+  //     }
+  //   )
+  // }
+
+  fetchVilles() {
     this.villeService.getVilles().subscribe(
-      (response:any)=>{
+      (response: any) => {
         console.log(response.data);
         this.villes = response;
-        if(response.data)
+        if (response.data) {
           this.villes = response.data;
-          },
-          (error:any)=>{
-            console.log(error);
+        }
+        this.sharedService.updateVilles(this.villes); // Mettre à jour les villes dans le service partagé
+      },
+      (error: any) => {
+        console.log(error);
       }
-    )
+    );
   }
-
 
   deleteVille(id: number) {
     if (confirm('Êtes-vous sûr de vouloir supprimer ce rôle?')) { // Ajouter une confirmation avant la suppression
@@ -65,25 +87,6 @@ export class VilleComponent {
   }
 
 
-  // onSubmit(): void {
-  //   console.log(this.myForm);
-    
-  //   if (this.myForm.valid) {
-  //     console.log(this.myForm);
-      
-  //     const newVille = this.myForm.value;
-  //     this.villeService.addVille(newVille).subscribe(
-  //       response => {
-  //         console.log('Ville ajoutée avec succès:', response);  // Ajoutez ceci
-  //         this.fetchVilles();  // Recharger la liste des villes après l'ajout
-  //         this.myForm.reset();  // Réinitialiser le formulaire après l'ajout
-  //       },
-  //       error => {
-  //         console.error('Erreur lors de l\'ajout de la ville', error);
-  //       }
-  //     );
-  //   }
-  // }
   
   onSubmit(): void {
     if (this.myForm.valid) {
