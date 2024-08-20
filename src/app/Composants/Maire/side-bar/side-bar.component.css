@@ -1,7 +1,9 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
 .sidebar {
   background-color: #618062; /* Background color */
   color: #fff;
-  width: 200px;
+  width: 250px;
   padding: 20px;
   display: flex;
   flex-direction: column;
@@ -85,4 +87,12 @@ line-height: normal;
 
 .svg-container:hover .svg-path {
   fill: #000000; /* Change to black on hover */
+}
+
+.menu-item img {
+  transition: filter 0.3s ease;
+}
+
+.menu-item:hover img {
+  filter: grayscale(100%);
 }
