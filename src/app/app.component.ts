@@ -1,10 +1,7 @@
 import { Component } from '@angular/core';
 import { RouterOutlet } from '@angular/router';
-import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { ReactiveFormsModule } from '@angular/forms';
-
-
 import { SideBarComponent } from "./Composants/Maire/side-bar/side-bar.component";
 import { BanniereComponent } from "./Composants/Maire/banniere/banniere.component";
 import { StatistiqueComponent } from "./Composants/Maire/statistique/statistique.component";
