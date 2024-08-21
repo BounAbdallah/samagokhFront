@@ -1,104 +1,262 @@
 <!DOCTYPE html>
 <html lang="fr">
-
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Détails du projet</title>
-    <!-- Lien vers le fichier CSS de Bootstrap -->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
-    <link rel="stylesheet" href="detailsprojet.component.css">
-    <style>
-        
-    </style>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Détails du Projet</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+  <style>
+    body {
+      font-family: 'Poppins', sans-serif;
+      background-color: #f9f9f9;
+      color: #333;
+      text-align: center;
+      margin: 0;
+      padding: 0;
+    }
+
+    /* Style de la barre de navigation */
+    .navbar {
+      background-color: #1A2F38;
+      padding: 15px;
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    }
+
+    .navbar-brand {
+      font-size: 24px;
+      font-weight: 600;
+      color: #FA983A;
+    }
+
+    .navbar-toggler {
+      border: none;
+    }
+
+    /* Style du titre de la page */
+    .project-title {
+      padding: 50px 0;
+      background-color: #FA983A;
+      color: white;
+      margin-bottom: 30px;
+      font-size: 36px;
+      font-weight: 700;
+      letter-spacing: 1.5px;
+    }
+
+    /* Style de la section de profil */
+    .profile-section {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      margin-bottom: 20px;
+    }
+
+    .profile-image {
+      width: 120px;
+      height: 120px;
+      border-radius: 50%;
+      border: 4px solid #FA983A;
+      object-fit: cover;
+      margin-bottom: 15px;
+      box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+    }
+
+    .profile-info {
+      text-align: center;
+      margin-bottom: 10px;
+    }
+
+    .profile-info h5 {
+      margin: 0;
+      font-size: 20px;
+      font-weight: 600;
+      color: #1A2F38;
+    }
+
+    .profile-info small {
+      color: #999;
+      font-weight: 400;
+    }
+
+    /* Style de l'image du projet */
+    .project-image-container {
+      position: relative;
+      max-width: 90%;
+      margin: 0 auto;
+    }
+
+    .project-image {
+      width: 100%;
+      height: auto;
+      border-radius: 20px;
+      box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+      transition: transform 0.3s ease;
+    }
+
+    .project-image:hover {
+      transform: scale(1.02);
+    }
+
+    /* Statistiques des commentaires et votes */
+    .project-stats {
+      display: flex;
+      justify-content: center;
+      gap: 40px;
+      padding: 25px 0;
+    }
+
+    .project-stats .stat {
+      font-size: 18px;
+      color: #1A2F38;
+      font-weight: 600;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+
+    .stat i {
+      color: #FA983A;
+      font-size: 22px;
+    }
+
+    /* Section description et formulaire de commentaires */
+    .project-description {
+      background-color: white;
+      padding: 40px;
+      border-radius: 15px;
+      max-width: 900px;
+      margin: 40px auto;
+      box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+      text-align: left;
+    }
+
+    .project-description h2 {
+      font-size: 28px;
+      margin-bottom: 20px;
+      color: #1A2F38;
+      font-weight: 600;
+    }
+
+    .comments-section {
+      background-color: white;
+      padding: 40px;
+      border-radius: 15px;
+      max-width: 900px;
+      margin: 40px auto;
+      box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+      text-align: left;
+    }
+
+    /* Formulaire des commentaires */
+    .comments-section form {
+      margin-bottom: 30px;
+    }
+
+    .btn-submit {
+      background-color: #FA983A;
+      border: none;
+      color: white;
+      padding: 12px 25px;
+      font-size: 16px;
+      border-radius: 5px;
+      transition: background-color 0.3s ease;
+    }
+
+    .btn-submit:hover {
+      background-color: #E07D27;
+    }
+
+    /* Liste des commentaires */
+    .comment-item {
+      border-bottom: 1px solid #ddd;
+      padding: 15px 0;
+    }
+
+    .comment-item:last-child {
+      border-bottom: none;
+    }
+
+    .comment-item strong {
+      font-size: 16px;
+      color: #333;
+    }
+
+    .comment-item p {
+      margin: 5px 0;
+      color: #666;
+    }
+  </style>
 </head>
-
 <body>
-    <nav class="navbar navbar-expand-lg navbar-light px-5">
-        <div class="container-fluid">
-            <!-- Logo -->
-            <a class="navbar-brand" href="#">
-                <img src="../../assets/images/Rectangle 3.png" alt="Logo" width="30" height="30" class="d-inline-block align-text-top" id="logo">
-            </a>
 
-            <!-- Nom de l'utilisateur -->
-            <div class="d-flex">
-                <span class="navbar-text ms-auto">
-                    Fatbintou
-                </span>
-            </div>
-        </div>
-    </nav>
+  <!-- Barre de navigation -->
+  <nav class="navbar navbar-expand-lg navbar-dark">
     <div class="container-fluid">
-        <div class="row no-gutters">
-            <div class="col-md-6">
-                <img src="../../assets/images/Rectangle 95.png" class="img-fluid w-100" alt="Image">
-            </div>
+      <a class="navbar-brand" href="#">SamaGokh</a>
+    </div>
+  </nav>
 
-            <div class="col-md-6 bg-yellow p-4 d-flex flex-column justify-content-center">
-                <h2 class="mb-3">Projet de reboisement</h2>
-                <p class="mb-3">
-                    Le projet "Verdissons Notre Commune" vise à restaurer et 
-                    enrichir les espaces verts de notre communauté en lançant
-                     une vaste campagne de reboisement. L'objectif est de planter 
-                     des arbres dans les zones urbaines et périurbaines, contribuant
-                      ainsi à la lutte contre la déforestation, l'amélioration de la
-                       qualité de l'air, et la création de zones ombragées pour le
-                        bien-être des habitants. Le projet impliquera activement
-                         les citoyens, les écoles, et les associations locales pour 
-                         faire de cette initiative un véritable mouvement collectif. 
-                         Des ateliers de sensibilisation seront organisés pour éduquer 
-                         la population sur l'importance des arbres pour l'environnement et pour notre santé.
-                </p>
-                <div class="d-flex justify-content-evenly">
-                    <p class="mb-1"><strong>Auteur :</strong> La Mairie</p>
-                    <p class="mb-1"><i class="bi bi-chat-dots"></i> 10 Commentaires</p>
-                    <p><i class="bi bi-hand-thumbs-up"></i> 50 Votes</p>
-                </div>
-            </div>
-        </div>
+  <!-- Titre du projet -->
+  <div class="project-title">
+    Réfection du terrain de foot de Médina
+  </div>
+
+  <!-- Section Profil -->
+  <div class="container">
+    <div class="profile-section">
+      <img src="profil.jpg" alt="Profil" class="profile-image">
+      <div class="profile-info">
+        <h5>Amadou</h5>
+        <small>Publié le 12 août 2024 à 14:35</small>
+      </div>
     </div>
-    <div class="container-fluid my-4 px-0">
-        <div class="row g-3">
-            <!-- Section Laisser un commentaire -->
-            <div class="col-lg-7 col-md-12">
-                <div class="p-4 border rounded">
-                    <p class="mb-2"><strong>Laisser un commentaire</strong></p>
-                    <textarea class="form-control mb-3" rows="6" placeholder="Votre message"></textarea>
-                    <button class="btn btn-warning text-white">Envoyer</button>
-                </div>
-            </div>
-            
-            <!-- Section Liste des commentaires -->
-            <div class="col-lg-5 col-md-12">
-                <div class="p-4 border rounded">
-                    <p class="mb-2"><strong>Liste des commentaires</strong></p>
-                    <div class="mb-3">
-                        <p class="mb-1"><strong><i class="bi bi-person-fill"></i> Khadija Cissé</strong></p>
-                        <p>Bravo pour cette initiative ! Les arbres sont essentiels pour notre bien-être...</p>
-                    </div>
-                    <div class="mb-3">
-                        <p class="mb-1"><strong><i class="bi bi-person-fill"></i> Mamadou Diop</strong></p>
-                        <p>Excellente idée ! Planter des arbres ne restaure pas seulement notre ville...</p>
-                    </div>
-                    <div class="mb-3">
-                        <p class="mb-1"><strong><i class="bi bi-person-fill"></i> Fatou Sow</strong></p>
-                        <p>Ce projet est exactement ce dont notre commune avait besoin...</p>
-                    </div>
-                    <div>
-                        <p class="mb-1"><strong><i class="bi bi-person-fill"></i> Khadji Thiam</strong></p>
-                        <p>En tant qu'enseignant, je suis ravi de voir un tel projet...</p>
-                    </div>
-                </div>
-            </div>
-        </div>
+
+    <!-- Image du projet -->
+    <div class="project-image-container">
+      <img src="https://img.freepik.com/photos-gratuite/football-herbe_23-2147644477.jpg?t=st=1724170339~exp=1724173939~hmac=14e346dd1c1840b56d13afa5f465e28e9c4c4afc6119ec60d77bf8efa6bfe12a&w=1060" alt="Terrain de foot" class="project-image">
     </div>
-    
-    
-    <!-- Lien vers le fichier JavaScript de Bootstrap -->
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
-    <!-- Lien vers les icônes Bootstrap -->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css" rel="stylesheet">
+  </div>
+
+  <!-- Statistiques -->
+  <div class="project-stats">
+    <div class="stat"><i class="fa fa-comments"></i> 12 commentaires</div>
+    <div class="stat"><i class="fa fa-thumbs-up"></i> 150 votes</div>
+  </div>
+
+  <!-- Section Description -->
+  <div class="project-description">
+    <h2>Description du projet</h2>
+    <p>Le terrain de foot de Médina est dans un état dégradé, ce qui limite les activités sportives pour les jeunes de la commune. Le projet vise à rénover le terrain en installant de nouveaux buts, en aménageant des bancs, et en créant un espace sûr pour la pratique du sport.</p>
+  </div>
+
+  <!-- Section Commentaires -->
+  <div class="comments-section">
+    <h2>Laisser un commentaire</h2>
+    <form>
+      <div class="mb-3">
+        <textarea class="form-control" placeholder="Votre commentaire..." rows="4"></textarea>
+      </div>
+      <button type="submit" class="btn btn-submit">Envoyer</button>
+    </form>
+
+    <h3 class="mt-4">Commentaires</h3>
+    <div class="comment-item">
+      <strong>Fatou :</strong>
+      <p>Très bonne initiative ! J'espère que cela se réalisera bientôt.</p>
+    </div>
+    <div class="comment-item">
+      <strong>Moussa :</strong>
+      <p>Il était temps, ce terrain est vraiment en mauvais état !</p>
+    </div>
+    <div class="comment-item">
+      <strong>Adama :</strong>
+      <p>Merci Amadou, nous attendons impatiemment ce projet !</p>
+    </div>
+  </div>
+
+  <!-- Bootstrap JS -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
 </body>
-
 </html>
