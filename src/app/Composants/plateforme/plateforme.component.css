@@ -1,0 +1,321 @@
+body{
+  font-family: sans-serif;
+}
+nav{
+  display:flex;
+  justify-content: space-evenly;
+}
+nav img{
+  width: auto;
+  height: 5rem;
+}
+ul li{
+  list-style: none;
+  font-size:1.1rem;
+  font-family: sans-serif;
+}
+ul{
+  display:flex;
+  gap:6rem;
+  margin-top: 2rem;
+}
+.video-background-container {
+  position: relative;
+  width: 100%;
+  height: 80vh;
+  overflow: hidden;
+}
+
+.video-background-container video {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  min-width: 100%;
+  min-height: 100%;
+  width: auto;
+  height: auto;
+  z-index: -1;
+  transform: translate(-50%, -50%);
+  object-fit: cover;
+}
+
+/* Fond noir semi-transparent au-dessus de la vidéo */
+.overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.3);
+  z-index: 1; /* Assure que l'overlay est au-dessus de la vidéo */
+}
+
+.caisse {
+  position: relative;
+  z-index: 2;
+  color: #fff;
+    padding-top: 0;
+    margin-top: 0; /* Élimine toute marge supérieure */
+  max-width: 600px;
+  margin: 0 auto; /* Centre horizontalement */
+  display: flex;
+  flex-direction: column;
+  align-items: center; /* Centre horizontalement les éléments */
+  justify-content: center; /* Centre verticalement les éléments */
+  height: 100vh;
+  text-align: center; /* Centre le texte */
+}
+
+.caisse h1 {
+  font-size: 3em;
+  margin-bottom: 15px;
+  color: #FA983A;
+  margin-top: 0; 
+  padding-top: 0; 
+}
+
+.caisse p {
+  font-size: 1.2em;
+  line-height: 2;
+}
+
+.cta-button {
+  border: none;
+  width: 10rem;
+  height: 2.3125rem;
+  border-radius: 0.625rem;
+  background: #FA983A;
+  font-size: 1rem;
+  color: white;
+  margin-top: 20px;
+}
+.span1{
+  color:#0C3B2E;
+  font-size:3rem;
+  }
+  .span2{
+   color:#FA983A;
+   font-size:3rem;
+  }
+  .span3{
+  color:#E31B23;
+  font-size:3rem;
+  }
+  h2{
+    text-align:center;
+  }
+  .banderole{
+    height: 8rem;
+    width:60rem;
+    
+  }
+  .paragraphe1{
+    color: #000;
+  font-size: 1.2rem;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  width: 36.9375rem;
+  margin-bottom: 2rem;
+  margin-left:3rem
+  }
+  .paragraphe2{
+    color: #000;
+  font-size: 1.2rem;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  width: 36.9375rem;
+  margin-bottom: 2rem;
+  margin-left: 9rem;
+  }
+  .paragraphe1 span{
+    font-weight:500;
+  }
+  .paragraphe2 span{
+    font-weight:500;
+  }
+  .caisse2{
+    display:flex;
+    justify-content: space-between;
+    margin-top: 5rem;
+    margin-bottom:7rem
+  }
+  .vert{
+    width: 49.625rem;
+    height: 7.5rem;
+    background-color: #0C3B2E;
+    border-radius: 3.75rem 0rem 0rem 0rem;
+    margin-top:2rem;
+  }
+  .jaune{
+    width: 49.625rem;
+    height: 7.5rem;
+    background-color:#FA983A;
+    border-radius: 0rem 3.75rem 0rem 0rem;
+    margin-bottom: 2rem;
+  }
+  .firstpic{
+    width: 35.75rem;
+  height: 19.875rem;
+  margin-left:3rem
+  }
+  .secondpic{
+    width: 35.75rem;
+  height: 19.875rem;
+  margin-left: 9rem;
+  }
+  
+.etoile{
+  width: auto;
+  height: 1rem;
+}
+.caisse2{
+  display: flex;
+  justify-content: space-around;
+  margin-top:5rem;
+  margin-bottom: 5rem;
+}
+.box-overlay {
+  position: relative;
+  overflow: hidden;
+  border-radius: 6.25rem 6.25rem 0rem 0rem;
+}
+
+.box-overlay::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5); /* Fond noir avec 50% de transparence */
+  border-radius: 6.25rem 6.25rem 0rem 0rem;
+  z-index: 1; /* Pour que le pseudo-élément soit au-dessus de l'image de fond */
+}
+.box6 h4{
+  margin-top:17rem;
+  color:white;
+  font-weight:500;
+  position: relative;
+  z-index: 2; /* Le texte est au-dessus du fond noir */
+  color: white; 
+  width: 20.5625rem;
+  margin-left:1rem
+}
+.box4 h4{
+  margin-top:17rem;
+  width: 19.125rem;
+  color:white;
+  font-weight:500;
+  position: relative;
+  z-index: 2; /* Le texte est au-dessus du fond noir */
+  margin-left:1rem
+}
+.box5 h4{
+  margin-top:17rem;
+  width: 20.5625rem;
+  color:white;
+  font-weight:500;
+  position: relative;
+  z-index: 2; /* Le texte est au-dessus du fond noir */
+  margin-left:1rem
+}
+.box4, .box5, .box6 {
+  width: 22rem;
+  height: 25rem;
+  background-size: cover;
+  background-position: center;
+}
+
+.box4 {
+  background-image: url(../../../assets/images/Rectangle\ 101.png);
+}
+
+.box5 {
+  background-image: url(../../../assets/images/Rectangle\ 102.png);
+}
+
+.box6 {
+  background-image: url(../../../assets/images/Rectangle\ 103.png);
+}
+.btnview{
+  width: 8.375rem;
+height: 2.3125rem;
+border-radius: 0.625rem;
+background: #FA983A;
+color:white;
+font-weight:500;
+border:none;
+position: relative;
+  z-index: 2; /* Le texte est au-dessus du fond noir */;
+  margin-left:1rem
+}
+.caisse3{
+  display:flex;
+  justify-content: space-around;
+  margin-top: 5rem;
+  background-image: url(../../../assets/images/Rectangle\ 100.png);
+}
+
+footer{
+  background-color:#0C3B2E;
+  color:white;
+  display:flex;
+  justify-content: space-evenly;
+  margin-top:12rem;
+  padding-top:3rem; 
+  font-family: sans-serif;
+}
+.title{
+  font-size: 1.3rem;
+}
+footer p{
+  text-align:center ;
+}
+.btn-send{
+  width: 8.375rem;
+  height: 2.3125rem;
+  border-radius: 0.625rem;
+  background: #FA983A;
+  color:white;
+  font-weight:500;
+  border:none;
+}
+.logo{
+  width: auto;
+height: 9.0625rem;
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+  .caisse h1 {
+    font-size: 2em;
+  }
+
+  .caisse p {
+    font-size: 1em;
+  }
+  .navbar-brand {
+    margin-right: auto;
+}
+.navbar-nav {
+    text-align: center;
+    margin-top: 1rem;
+}
+}
+
+@media (max-width: 480px) {
+  .caisse h1 {
+    font-size: 1.5em;
+  }
+
+  .caisse p {
+    font-size: 0.9em;
+  }
+  }
+ 
+  
+
+
+

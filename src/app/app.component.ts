@@ -6,6 +6,7 @@ import { SideBarComponent } from "./Composants/Maire/side-bar/side-bar.component
 import { BanniereComponent } from "./Composants/Maire/banniere/banniere.component";
 import { StatistiqueComponent } from "./Composants/Maire/statistique/statistique.component";
 import { CardProjetComponent } from "./Composants/Maire/card-projet/card-projet.component";
+import { PlateformeComponent } from './Composants/plateforme/plateforme.component';
 import { NotificationComponent } from "./Composants/Maire/notification/notification.component";
 import { BarDeRecherheComponent } from "./Composants/Maire/bar-de-recherhe/bar-de-recherhe.component";
 import { DetailsProjetComponent } from "./Composants/Maire/details-projet/details-projet.component";
@@ -21,6 +22,7 @@ import { ListeProjetHabitantComponent } from './projetHabitant/liste-projet-habi
   selector: 'app-root',
   standalone: true,
   imports: [RouterOutlet, ReactiveFormsModule, SideBarComponent, BanniereComponent, StatistiqueComponent, CardProjetComponent, NotificationComponent, BarDeRecherheComponent, DetailsProjetComponent, CommentaireComponent, ProjectFormComponent, ListeHabitantsComponent, ListeProjetSoumisComponent, CardProjetMairieComponent,CreationProjectComponent,ListeProjetHabitantComponent],
+  // imports: [RouterOutlet, SideBarComponent, BanniereComponent, StatistiqueComponent, CardProjetComponent,PlateformeComponent],
   templateUrl: './app.component.html',
   styleUrl: './app.component.css'
 })

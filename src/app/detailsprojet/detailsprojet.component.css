@@ -1,0 +1,70 @@
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f5f5f5;
+  }
+
+  /* Style de la barre de navigation */
+  .navbar {
+    background-color: #0C3B2E;
+  }
+
+  /* Style du titre de la page */
+  .project-title {
+    text-align: center;
+    padding: 40px 0;
+    background-color: #FA983A;
+    color: white;
+    margin-bottom: 20px;
+  }
+
+  /* Style de l'image avec border-radius */
+  .project-image {
+    display: block;
+    max-width: 100%;
+    height: auto;
+    border-radius: 20px;
+    margin: 0 auto;
+  }
+
+  /* Style pour les compteurs de commentaires et votes */
+  .project-stats {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    padding: 20px 0;
+  }
+  .project-stats .stat {
+    font-size: 18px;
+    color: #0C3B2E;
+  }
+
+  /* Style de la description et du formulaire */
+  .project-description {
+    margin: 30px 0;
+  }
+
+  .comments-section {
+    background-color: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  }
+
+  /* Style pour les commentaires */
+  .comment-item {
+    border-bottom: 1px solid #ddd;
+    padding: 10px 0;
+  }
+  .comment-item:last-child {
+    border-bottom: none;
+  }
+
+  /* Style du bouton de soumission */
+  .btn-submit {
+    background-color: #FA983A;
+    border: none;
+    color: white;
+    padding: 10px 20px;
+    font-size: 16px;
+    border-radius: 5px;
+  }
