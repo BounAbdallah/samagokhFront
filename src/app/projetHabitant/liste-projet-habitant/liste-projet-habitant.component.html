@@ -71,13 +71,13 @@
             <h1>Liste de mes projets</h1>
 
             <section class="project-list">
-                
+                @for (projet of tabprojet; track $index){
+
                 <div class="project-card">
                     <img src="../../../assets/images/miss.png"  class="project-image">
                     <div class="project-info">
-                        <h2>Programme de soutien scolaire</h2>
-                        <p>Un projet pour aider les élèves en difficulté scolaire <br>
-                            Un projet pour aider les élèves en difficulté scolaire...</p>
+                        <h2>{{projet.titre}}</h2>
+                        <p>{{projet.description}}</p>
                         <div class="stats">
                             <h3>Vote<span>3500</span></h3>
                             <h3>Commentaires<span>3500</span></h3>
@@ -88,6 +88,8 @@
                        <button><span>publie le 17/11/2002</span></button> 
                     </div>
                 </div>
+
+                }
                 <!-- deux -->
                 <!-- <div class="project-card">
                     <img src="../../../assets/images/miss.png"  class="project-image">

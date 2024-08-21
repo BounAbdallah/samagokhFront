@@ -18,13 +18,13 @@ export class ListeProjetHabitantComponent implements OnInit{
   tabprojet:projetModel[]=[];
   projetObject:projetModel ={}
   ngOnInit(): void {
-    this.fetchprojet;
+    this.fetchprojet();
 
   }
 
   // fonction pour la recuperation des projets
 fetchprojet(){
-  this.projectServce . getAllProjet().subscribe(
+  this.projectServce.getAllProjet().subscribe(
     (response:any)=>{
       console.log(response.data);
 
