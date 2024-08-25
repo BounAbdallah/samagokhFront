@@ -15,8 +15,14 @@ export class VilleService {
   }
 
   getShowVilles(id:number):Observable<any>{
+    console.log('my-i@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@eeeeeeeeeeeeeeeeeeeeeeeeeee',id);
+    console.log('my-i@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@d',this.http.get(`${this.apiUrl}/villes/${id}`));
     return this.http.get(`${this.apiUrl}/villes/${id}`);
   }
+
+  // getVilleById(id: number): Observable<any> {
+  //   return this.http.get(`${this.apiUrl}/villes/${id}`);
+  // }
 
   deleteVille(id:number):Observable<any> {
     return this.http.delete(`${this.apiUrl}/villes/${id}`);

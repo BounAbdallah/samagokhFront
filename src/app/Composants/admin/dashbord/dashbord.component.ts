@@ -16,6 +16,8 @@ import { RouterModule } from '@angular/router';
 export class DashbordComponent  implements OnInit{
   cards: any[] = [];
 
+  villeDetails: any;
+
   villes: any[] = []; 
 
   // variable de pagination 
@@ -90,6 +92,7 @@ export class DashbordComponent  implements OnInit{
 
   populateCards(villes: any[]): void {
     this.cards = villes.map(ville => ({
+      id: ville.id, // Ajoutez cette ligne
       imgSrc: 'https://img.freepik.com/photos-gratuite/ville-ciel-bleu_1417-1867.jpg?ga=GA1.2.1272467380.1720960746&semt=ais_hybrid', 
       title: ville.libelle,
       updated: ville.description,
@@ -120,8 +123,6 @@ export class DashbordComponent  implements OnInit{
       }
     );
   }
-
-  
 
 }
 

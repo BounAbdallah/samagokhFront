@@ -84,12 +84,12 @@ export class VilleComponent  implements OnInit{
     }
   }
 
-  getShowVilles(id: number) {
-      this.villeService.getShowVilles(id).subscribe(
-        () => this.fetchVilles(),  // Recharger les rôles après la suppression
-        error => console.error('Erreur lors de la récupération de laville', error)
-      );
-  }
+  // getShowVilles(id: number) {
+  //     this.villeService.getShowVilles(id).subscribe(
+  //       () => this.fetchVilles(),  // Recharger les rôles après la suppression
+  //       error => console.error('Erreur lors de la récupération de laville', error)
+  //     );
+  // }
 
 
   
